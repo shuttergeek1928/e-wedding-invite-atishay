@@ -1,0 +1,26 @@
+{
+  "name": "Wedding invites",
+  "short_name": "Invites",
+  "start_url": "/admin",
+  "scope": "/admin",
+  "display": "standalone",
+  "background_color": "#3a0f19",
+  "theme_color": "#3a0f19",
+  "share_target": {
+    "action": "/admin",
+    "method": "GET",
+    "enctype": "application/x-www-form-urlencoded",
+    "params": {
+      "title": "title",
+      "text": "text",
+      "url": "url"
+    }
+  },
+  "icons": [
+    {
+      "src": "/favicon.png",
+      "sizes": "192x192",
+      "type": "image/png"
+    }
+  ]
+}

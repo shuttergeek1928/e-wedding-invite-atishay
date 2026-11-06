@@ -1,0 +1,38 @@
+.guest-welcome {
+  position: relative;
+  z-index: 2;
+  text-align: center;
+  padding: 0.85rem 1.1rem;
+  margin: 0 auto 1.25rem;
+  max-width: 32rem;
+  border: 1px solid var(--color-line);
+  background: rgba(42, 10, 18, 0.55);
+  color: var(--color-gold-soft);
+}
+
+.guest-welcome__hi {
+  font-family: var(--font-hindi);
+  font-size: clamp(1.05rem, 2.4vw, 1.25rem);
+  margin-bottom: 0.35rem;
+  color: var(--color-gold-soft);
+}
+
+.guest-welcome__hi strong {
+  font-family: var(--font-hindi);
+  color: var(--color-gold);
+}
+
+.guest-welcome__invite {
+  font-family: var(--font-hindi);
+  font-size: clamp(0.95rem, 2vw, 1.1rem);
+  color: var(--color-gold-soft);
+  margin-bottom: 0.35rem;
+}
+
+.guest-welcome__days {
+  margin-top: 0.35rem;
+  font-family: var(--font-display);
+  font-style: italic;
+  font-size: clamp(0.88rem, 1.7vw, 1rem);
+  color: var(--color-muted);
+}

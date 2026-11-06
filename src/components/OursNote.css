@@ -1,0 +1,26 @@
+.ours-note {
+  padding-block: clamp(2.5rem, 6vw, 4rem);
+  background:
+    linear-gradient(180deg, transparent, rgba(42, 10, 18, 0.45), transparent);
+}
+
+.ours-note__inner {
+  max-width: 28rem;
+  text-align: center;
+  margin-inline: auto;
+}
+
+.ours-note__line {
+  font-family: var(--font-hindi);
+  font-size: clamp(1.05rem, 2.4vw, 1.25rem);
+  color: var(--color-gold-soft);
+  line-height: 1.65;
+  margin-bottom: 0.55rem;
+}
+
+.ours-note__sign {
+  margin-top: 1.15rem;
+  font-family: var(--font-script);
+  font-size: clamp(1.55rem, 3.5vw, 2rem);
+  color: var(--color-gold);
+}

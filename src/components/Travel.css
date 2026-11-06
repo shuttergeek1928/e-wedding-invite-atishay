@@ -1,0 +1,133 @@
+.travel {
+  background: rgba(42, 10, 18, 0.35);
+}
+
+.travel__content,
+.travel__venues,
+.travel__modes {
+  position: relative;
+  z-index: 1;
+}
+
+.travel__venues {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1rem;
+  margin-bottom: 2rem;
+}
+
+.venue-chip {
+  border: 1px solid var(--color-line);
+  padding: clamp(1.15rem, 2.5vw, 1.5rem);
+  background: rgba(42, 10, 18, 0.92);
+}
+
+.venue-chip span {
+  display: inline-block;
+  font-size: 0.7rem;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  color: var(--color-gold);
+  margin-bottom: 0.55rem;
+}
+
+.venue-chip strong {
+  display: block;
+  font-family: var(--font-display);
+  font-size: 1.2rem;
+  font-weight: 500;
+  color: var(--color-gold-soft);
+  margin-bottom: 0.4rem;
+}
+
+.venue-chip p {
+  color: var(--color-muted);
+  font-size: 0.92rem;
+  margin-bottom: 0.75rem;
+}
+
+.travel__leave {
+  border: 1px solid var(--color-line);
+  background: rgba(42, 10, 18, 0.92);
+  padding: 1.15rem 1.35rem;
+  margin-bottom: 1.5rem;
+  color: var(--color-muted);
+  font-family: var(--font-display);
+  font-style: italic;
+}
+
+.travel__leave-label {
+  font-style: normal;
+  font-family: var(--font-body);
+  font-size: 0.7rem;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  color: var(--color-gold);
+  margin-bottom: 0.45rem;
+}
+
+.venue-chip__maps {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.75rem 1rem;
+}
+
+.venue-chip a {
+  font-size: 0.75rem;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--color-gold);
+}
+
+.travel__modes {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1rem;
+}
+
+.travel-mode {
+  border: 1px solid var(--color-line);
+  padding: clamp(1.35rem, 3vw, 1.85rem);
+  background: rgba(42, 10, 18, 0.94);
+}
+
+.travel-mode__label {
+  font-size: 0.7rem;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: var(--color-gold);
+  margin-bottom: 0.55rem;
+}
+
+.travel-mode__name {
+  font-size: clamp(1.15rem, 2vw, 1.35rem);
+  margin-bottom: 0.7rem;
+  color: var(--color-gold-soft);
+}
+
+.travel-mode__detail {
+  font-size: 0.95rem;
+  color: var(--color-muted);
+  margin-bottom: 1rem;
+  font-family: var(--font-display);
+  font-style: italic;
+}
+
+.travel-mode__link {
+  font-size: 0.75rem;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--color-gold);
+}
+
+@media (max-width: 900px) {
+  .travel__modes {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 700px) {
+  .travel__venues {
+    grid-template-columns: 1fr;
+  }
+}
