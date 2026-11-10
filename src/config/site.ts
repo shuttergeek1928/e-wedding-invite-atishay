@@ -29,10 +29,19 @@ export type SiteDay = {
   events: SiteEvent[]
 }
 
+export type TravelMode = {
+  mode: string
+  name: string
+  detail: string
+  link: string
+  secondaryLabel?: string
+  secondaryLink?: string
+}
+
 const groomDayChoices = [
-  { id: 'all' as const, title: 'All days', sub: '27, 28, 29 & 30 November' },
-  { id: '29-30' as const, title: '29 & 30 only', sub: 'Ujjain · Sagai to Wedding' },
-  { id: '30' as const, title: '30 only', sub: 'Wedding day' },
+  { id: 'all' as const, title: 'All days', sub: '23, 24, 25 & 26 January' },
+  { id: '25-26' as const, title: '25 & 26 only', sub: 'Bhopal · Haldi to Wedding' },
+  { id: '26' as const, title: '26 only', sub: 'Wedding day' },
 ]
 
 export function getSiteContent(family: HostFamily) {
@@ -55,9 +64,12 @@ export function getSiteContent(family: HostFamily) {
       calendarEvents: bridePatrika.calendarEvents,
       timeline: bridePatrika.timeline,
       timelineVenue: bridePatrika.timelineVenue,
-      travel: bridePatrika.travel,
+      travel: {
+        ...bridePatrika.travel,
+        modes: bridePatrika.travel.modes as unknown as TravelMode[],
+      },
       faq: bridePatrika.faq,
-      faqTip: bridePatrika.faqTip,
+      faqTip: bridePatrika.faqTip as string,
       faqSubtitle: bridePatrika.faqSubtitle,
       share: bridePatrika.share,
       eventsTitle: bridePatrika.eventsTitle,
@@ -65,7 +77,7 @@ export function getSiteContent(family: HostFamily) {
       dayChoices: bridePatrika.dayChoices,
       people: bridePatrika.people,
       mangalShlok: bridePatrika.mangalShlok,
-      dinnerNote: bridePatrika.dinnerNote,
+      dinnerNote: bridePatrika.dinnerNote as string,
       footer: weddingConfig.footer,
       credit: weddingConfig.credit,
     }
@@ -87,18 +99,21 @@ export function getSiteContent(family: HostFamily) {
     celebrationDays: weddingConfig.celebrationDays as unknown as SiteDay[],
     calendarEvents: weddingConfig.calendarEvents,
     timeline: weddingConfig.timeline,
-    timelineVenue: `${weddingConfig.venues.hotel.name}, ${weddingConfig.venues.hotel.shortAddress}`,
-    travel: weddingConfig.travel,
+    timelineVenue: `${weddingConfig.venues.hotel.address}`,
+    travel: {
+      ...weddingConfig.travel,
+      modes: weddingConfig.travel.modes as unknown as TravelMode[],
+    },
     faq: weddingConfig.faq,
-    faqTip: weddingConfig.travel.leaveIndoreOn29,
-    faqSubtitle: 'Arrival times, travel tips, and the Indore → Ujjain plan',
+    faqTip: weddingConfig.travel.departureNote,
+    faqSubtitle: 'Arrival times, travel tips, and celebration details',
     share: weddingConfig.share,
     eventsTitle: 'Wedding Events',
-    eventsSubtitle: 'Four days of rituals and joy across Indore and Ujjain',
+    eventsSubtitle: 'Four days of rituals and joy across Sehore & Bhopal',
     dayChoices: groomDayChoices,
     people: [] as typeof bridePatrika.people | [],
-    mangalShlok: '',
-    dinnerNote: '',
+    mangalShlok: '' as string,
+    dinnerNote: '' as string,
     footer: weddingConfig.footer,
     credit: weddingConfig.credit,
   }

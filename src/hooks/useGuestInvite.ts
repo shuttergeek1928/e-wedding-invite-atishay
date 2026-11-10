@@ -11,19 +11,19 @@ export function useGuestInvite(): InvitePayload | null {
 
     const legacy = params.get('from') || params.get('guest') || params.get('for')
     const sideWords = new Set([
-      'yashika',
+      'anushka',
       'bride',
-      'yb',
-      'bum',
-      'somya',
+      'as',
+      'tulip',
+      'atishay',
       'groom',
-      'st59',
-      'tiwari',
+      'av',
+      'dofu',
     ])
     if (legacy && !sideWords.has(legacy.toLowerCase())) {
       const daysRaw = params.get('days') || params.get('d') || 'all'
       const d =
-        daysRaw === '29-30' || daysRaw === '30' || daysRaw === 'all'
+        daysRaw === '25-26' || daysRaw === '26' || daysRaw === 'all'
           ? daysRaw
           : 'all'
       try {

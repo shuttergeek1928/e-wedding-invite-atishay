@@ -3,7 +3,7 @@ import { currentHostFamily, hostFamilyConfig } from '../config/sides'
 import type { HostFamily } from '../config/sides'
 
 /** Which celebration days this guest is invited to */
-export type InviteDaySet = 'all' | '29-30' | '30'
+export type InviteDaySet = 'all' | '25-26' | '26'
 
 export type InvitePayload = {
   /** Guest / contact name · for groups use “समस्त” */
@@ -12,7 +12,7 @@ export type InvitePayload = {
   s: boolean
   /** Elders named on the invite (optional), e.g. श्री …, श्रीमती … */
   e?: string[]
-  /** Days invited — all (27–30) · 29–30 · 30 only */
+  /** Days invited — all (23–26) · 25–26 · 26 only */
   d?: InviteDaySet
   /** Shared / WhatsApp-group invite (no personal name) */
   g?: boolean
@@ -30,18 +30,18 @@ export const inviteDayOptions: Array<{
 }> = [
   {
     id: 'all',
-    label: 'All days · 27–30 Nov (Indore & Ujjain)',
-    days: [27, 28, 29, 30],
+    label: 'All days · 23–26 Jan (Sehore & Bhopal)',
+    days: [23, 24, 25, 26],
   },
   {
-    id: '29-30',
-    label: '29 & 30 Nov only (Ujjain)',
-    days: [29, 30],
+    id: '25-26',
+    label: '25 & 26 Jan only (Bhopal)',
+    days: [25, 26],
   },
   {
-    id: '30',
-    label: '30 Nov only (Wedding day)',
-    days: [30],
+    id: '26',
+    label: '26 Jan only (Wedding day)',
+    days: [26],
   },
 ]
 
@@ -72,7 +72,7 @@ function fromBase64Url(value: string) {
 }
 
 export function normalizeDaySet(value: unknown): InviteDaySet {
-  if (value === '29-30' || value === '30' || value === 'all') return value
+  if (value === '25-26' || value === '26' || value === 'all') return value
   return 'all'
 }
 
@@ -176,26 +176,26 @@ export function formatDaysSummary(d?: InviteDaySet, family?: HostFamily): string
   const meta = daySetMeta(d)
   const host = family || currentHostFamily()
   if (host === 'bride') {
-    if (meta.id === 'all') return '28–30 November 2026 · Ujjain'
-    if (meta.id === '29-30') return '29 & 30 November 2026 · Ujjain'
-    return '30 November 2026 · Ujjain (Wedding day)'
+    if (meta.id === 'all') return '24–26 January 2027 · Sehore & Bhopal'
+    if (meta.id === '25-26') return '25 & 26 January 2027 · Bhopal'
+    return '26 January 2027 · Bhopal (Wedding day)'
   }
-  if (meta.id === 'all') return '27–30 November 2026 · Indore & Ujjain'
-  if (meta.id === '29-30') return '29 & 30 November 2026 · Ujjain'
-  return '30 November 2026 · Ujjain (Wedding day)'
+  if (meta.id === 'all') return '23–26 January 2027 · Sehore & Bhopal'
+  if (meta.id === '25-26') return '25 & 26 January 2027 · Bhopal'
+  return '26 January 2027 · Bhopal (Wedding day)'
 }
 
 export function formatDaysSummaryHi(d?: InviteDaySet, family?: HostFamily): string {
   const meta = daySetMeta(d)
   const host = family || currentHostFamily()
   if (host === 'bride') {
-    if (meta.id === 'all') return '28–30 नवम्बर 2026 · उज्जैन'
-    if (meta.id === '29-30') return '29 व 30 नवम्बर 2026 · उज्जैन'
-    return '30 नवम्बर 2026 · उज्जैन (शुभ विवाह)'
+    if (meta.id === 'all') return '24–26 जनवरी 2027 · सीहोर व भोपाल'
+    if (meta.id === '25-26') return '25 व 26 जनवरी 2027 · भोपाल'
+    return '26 जनवरी 2027 · भोपाल (शुभ विवाह)'
   }
-  if (meta.id === 'all') return '27–30 नवम्बर 2026 · इंदौर व उज्जैन'
-  if (meta.id === '29-30') return '29 व 30 नवम्बर 2026 · उज्जैन'
-  return '30 नवम्बर 2026 · उज्जैन (शुभ विवाह)'
+  if (meta.id === 'all') return '23–26 जनवरी 2027 · सीहोर व भोपाल'
+  if (meta.id === '25-26') return '25 व 26 जनवरी 2027 · भोपाल'
+  return '26 जनवरी 2027 · भोपाल (शुभ विवाह)'
 }
 
 /** Per-day schedule block for WhatsApp / preview */

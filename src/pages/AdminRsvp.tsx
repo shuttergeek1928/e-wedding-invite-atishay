@@ -37,7 +37,7 @@ type WaSettings = {
 }
 
 const DEFAULT_ACK =
-  'Namaste {{name}} — we received your RSVP for Yashika & Somya’s wedding. Thank you. — Pankaj Tiwari & Family'
+  'Namaste {{name}} — we received your RSVP for Anushka & Atishay’s wedding. Thank you. — Arvind Vishwakarma & Family'
 
 export default function AdminRsvp() {
   const [token, setToken] = useState(features.rsvpAdminToken)

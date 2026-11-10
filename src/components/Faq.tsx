@@ -22,7 +22,7 @@ export default function Faq() {
 
         {site.faqTip ? (
           <div className="faq__tip reveal">
-            <p className="faq__tip-label">29 November travel</p>
+            <p className="faq__tip-label">25 January travel</p>
             <p>{site.faqTip}</p>
           </div>
         ) : site.dinnerNote ? (

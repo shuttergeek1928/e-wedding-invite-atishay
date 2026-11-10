@@ -7,17 +7,29 @@
 }
 
 :root {
-  /* Matching the wedding card PDF */
-  --color-burgundy: #3a0f19;
-  --color-burgundy-deep: #2a0a12;
-  --color-burgundy-soft: #4a1622;
-  --color-burgundy-lift: #5c1c2a;
-  --color-gold: #c9a36a;
-  --color-gold-soft: #dcc49a;
-  --color-gold-deep: #a8844c;
-  --color-ink: #f3e7d4;
-  --color-muted: rgba(243, 231, 212, 0.68);
-  --color-line: rgba(201, 163, 106, 0.35);
+  /* Light Maroon & Golden theme */
+  --color-burgundy: #faf3e8;
+  --color-burgundy-deep: #f2e5d3;
+  --color-burgundy-soft: #fffbf3;
+  --color-burgundy-lift: #741c2e;
+  --color-maroon: #741c2e;
+  --color-maroon-soft: #8e273c;
+  --color-maroon-deep: #54101f;
+  --color-gold: #a87624;
+  --color-gold-soft: #741c2e;
+  --color-gold-deep: #8c6018;
+  --color-gold-bright: #cfa252;
+  --color-ink: #38141c;
+  --color-muted: rgba(74, 24, 35, 0.76);
+  --color-line: rgba(184, 134, 53, 0.38);
+
+  --surface-band: rgba(116, 28, 46, 0.045);
+  --surface-card: rgba(255, 252, 246, 0.92);
+  --surface-card-strong: rgba(255, 253, 249, 0.97);
+  --surface-input: #fffdf9;
+  --surface-nav: rgba(250, 243, 232, 0.94);
+  --surface-selected: rgba(116, 28, 46, 0.09);
+  --shadow-card: 0 8px 24px rgba(84, 16, 31, 0.06);
 
   --font-display: 'Cormorant Garamond', Georgia, serif;
   --font-script: 'Great Vibes', cursive;
@@ -42,7 +54,7 @@ body {
   color: var(--color-ink);
   background-color: var(--color-burgundy);
   background-image:
-    linear-gradient(rgba(58, 15, 25, 0.72), rgba(42, 10, 18, 0.82)),
+    linear-gradient(rgba(250, 243, 232, 0.92), rgba(246, 236, 222, 0.94)),
     url('/brand/texture.jpg');
   background-size: auto, cover;
   background-attachment: fixed, fixed;
@@ -160,32 +172,33 @@ section {
 }
 
 .btn-primary {
-  background: var(--color-gold);
-  color: var(--color-burgundy-deep);
+  background: var(--color-maroon);
+  color: #fbf4e6;
+  border-color: var(--color-gold-bright);
 }
 
 .btn-primary:hover {
-  background: var(--color-gold-soft);
-  border-color: var(--color-gold-soft);
+  background: var(--color-maroon-soft);
+  border-color: var(--color-gold);
 }
 
 .btn-ghost {
   background: transparent;
-  color: var(--color-gold-soft);
+  color: var(--color-maroon);
 }
 
 .btn-ghost:hover {
-  background: rgba(201, 163, 106, 0.12);
+  background: rgba(184, 134, 53, 0.12);
 }
 
 .btn-outline {
   background: transparent;
-  color: var(--color-gold-soft);
+  color: var(--color-maroon);
   border-color: var(--color-gold);
 }
 
 .btn-outline:hover {
-  background: rgba(201, 163, 106, 0.14);
+  background: rgba(184, 134, 53, 0.14);
 }
 
 @keyframes fadeInUp {
@@ -221,14 +234,15 @@ section {
   width: clamp(130px, 20vw, 240px);
   height: auto;
   pointer-events: none;
-  opacity: 0.42;
+  opacity: 0.5;
+  filter: brightness(0.76) sepia(0.38) saturate(1.45);
   z-index: 0;
   object-fit: contain;
 }
 
 .floral-corner--compact {
   width: clamp(100px, 16vw, 180px);
-  opacity: 0.28;
+  opacity: 0.36;
 }
 
 .floral-corner--tr {

@@ -14,7 +14,7 @@ export default function Footer() {
         <p className="footer__blessing" lang="hi">
           {blessing}
         </p>
-        <img src="/brand/logo-ys.png?v=4" alt="" className="footer__logo" />
+        <img src="/brand/logo-aa.svg?v=1" alt="" className="footer__logo" />
         <p className="footer__invite">JOIN US IN CELEBRATING</p>
         <p className="footer__names">
           {couple.partner2} & {couple.partner1}

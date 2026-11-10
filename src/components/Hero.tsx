@@ -38,9 +38,9 @@ export default function Hero() {
           onMouseLeave={endPress}
           onTouchStart={startPress}
           onTouchEnd={endPress}
-          aria-label="Yashika and Somya monogram. Press and hold for a secret note."
+          aria-label="Anushka and Atishay monogram. Press and hold for a secret note."
         >
-          <img src="/brand/logo-ys.png?v=4" alt="Yashika & Somya monogram" className="hero__logo" />
+          <img src="/brand/logo-aa.svg?v=1" alt="Anushka & Atishay monogram" className="hero__logo" />
         </button>
 
         <p

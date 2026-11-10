@@ -1,5 +1,5 @@
 .travel {
-  background: rgba(42, 10, 18, 0.35);
+  background: var(--surface-band);
 }
 
 .travel__content,
@@ -19,7 +19,8 @@
 .venue-chip {
   border: 1px solid var(--color-line);
   padding: clamp(1.15rem, 2.5vw, 1.5rem);
-  background: rgba(42, 10, 18, 0.92);
+  background: var(--surface-card);
+  box-shadow: var(--shadow-card);
 }
 
 .venue-chip span {
@@ -48,7 +49,8 @@
 
 .travel__leave {
   border: 1px solid var(--color-line);
-  background: rgba(42, 10, 18, 0.92);
+  background: var(--surface-card);
+  box-shadow: var(--shadow-card);
   padding: 1.15rem 1.35rem;
   margin-bottom: 1.5rem;
   color: var(--color-muted);
@@ -88,7 +90,8 @@
 .travel-mode {
   border: 1px solid var(--color-line);
   padding: clamp(1.35rem, 3vw, 1.85rem);
-  background: rgba(42, 10, 18, 0.94);
+  background: var(--surface-card-strong);
+  box-shadow: var(--shadow-card);
 }
 
 .travel-mode__label {
@@ -111,6 +114,12 @@
   margin-bottom: 1rem;
   font-family: var(--font-display);
   font-style: italic;
+}
+
+.travel-mode__links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.75rem 1rem;
 }
 
 .travel-mode__link {

@@ -1,58 +1,45 @@
 /**
- * Yashika’s patrika — same website shape as Somya’s card (wedding.ts).
- * Shown on the bride domain / ?side=yashika. Look stays shared.
- *
- * Spellings कंटक · नावे · लुंकड़ are as they appear on the printed card;
- * confirm those three before a final typed print.
+ * Anushka’s patrika — same website shape as Atishay’s card (wedding.ts).
+ * Shown on the bride domain / ?side=anushka. Look stays shared.
  */
 
-const dharamshalaMaps =
-  'https://www.google.com/maps/search/?api=1&query=Jain+Oswal+Dharamshala+Nayapura+Ujjain'
-const hotelMaps = 'https://maps.app.goo.gl/FYgbohYaJWyP8ij26'
+const hotelMaps = 'https://maps.app.goo.gl/iBcFC3mSDBpUEXMB9'
+const sehoreMaps = 'https://maps.app.goo.gl/pzAYPqxePQGpVYHd6'
 
 export const bridePatrika = {
   blessing: '॥ श्री गणेशाय नमः ॥',
-  blessings: [
-    '॥ श्री गणेशाय नमः ॥',
-    '॥ श्री दादागुरुदेव नमः ॥',
-    '॥ श्री महावीराय नमः ॥',
-    '॥ श्री अवन्ति पार्श्वनाथाय नमः ॥',
-  ],
-  invitationBlessings: [
-    '॥ श्री मणिभद्राय नमः ॥',
-    '॥ श्री आदिनाथाय नमः ॥',
-    '॥ श्री गौतम स्वामी नमः ॥',
-  ],
+  blessings: ['TBD'],
+  invitationBlessings: ['TBD'],
   mangalShlok:
     'मंगलम् भगवान वीरो, मंगलम् गौतम प्रभुः। मंगलम् स्थूलि भद्राद्यो, जैन धर्मोस्तु मंगलम्॥',
 
   couple: {
-    partner1: 'Somya',
-    partner2: 'Yashika',
-    partner1Full: 'Somya Tiwari',
-    partner2Full: 'Yashika Bum',
-    hashtag: '#YashikaAndSomya',
+    partner1: 'Atishay',
+    partner2: 'Anushka',
+    partner1Full: 'Atishay Vishwakarma',
+    partner2Full: 'Anushka Singh',
+    hashtag: '#Atishay&Anushka',
     bride: {
-      printed: 'सौ. कां. याशिका',
-      printedEn: 'Yashika Bum',
-      parents: 'श्रीमती प्रतिभा–दीपक बम',
-      parentsEn: 'Pratibha & Deepak Bum',
-      grandparents: 'स्व. श्रीमती नीरू बेन–स्व. श्री मदनलाल जी बम',
-      city: 'Ujjain',
+      printed: 'Anushka Singh',
+      printedEn: 'Anushka Singh',
+      parents: 'Lt. Arvind Pratap Singh & Archana Singh',
+      parentsEn: 'Lt. Arvind Pratap Singh & Archana Singh',
+      grandparents: 'TBD',
+      city: 'Sehore',
     },
     groom: {
-      printed: 'चि. सौम्य',
-      printedEn: 'Somya Tiwari',
-      parents: 'श्रीमती पुष्पा–पंकज जी तिवारी',
-      parentsEn: 'Pushpa & Pankaj Tiwari',
-      grandparents: 'श्रीमती संगीता–रामेश्वर जी तिवारी',
-      city: 'Indore',
+      printed: 'Atishay Vishwakarma',
+      printedEn: 'Atishay Vishwakarma',
+      parents: 'Rekha & Arvind Vishwakarma',
+      parentsEn: 'Rekha & Arvind Vishwakarma',
+      grandparents: 'Leela Devi Vishwakarma',
+      city: 'Sehore',
     },
   },
 
-  inviteFrom: 'प्रतिभा–दीपक बम',
-  inviteFromEn: 'Pratibha & Deepak Bum',
-  hosts: ['सौ. प्रतिभा–दीपक बम', 'चि. चिराग बम'],
+  inviteFrom: 'Lt. Arvind Pratap Singh & Archana Singh',
+  inviteFromEn: 'Lt. Arvind Pratap Singh & Archana Singh',
+  hosts: ['TBD Siblings'],
 
   hero: {
     tagline:
@@ -61,150 +48,130 @@ export const bridePatrika = {
   },
 
   ours: {
-    lines: [
-      'परिवार, जिनेन्द्र भगवान, कुलदेवी, देवता एवं पूर्वजों की कृपा से परिणय संस्कार का यह शुभ अवसर आया है।',
-      'इस अवसर पर पधारकर वर-वधु को आशीर्वाद प्रदान कर हमें अनुगृहित करें।',
-    ],
-    signOff: '— Yashika & Somya',
+    lines: ['TBD'],
+    signOff: 'Anushka & Atishay',
   },
 
   eventsTitle: 'Wedding Events',
-  eventsSubtitle: 'Three days of rituals and joy in Ujjain · 28–30 November 2026',
+  eventsSubtitle: 'Four days of rituals and joy across Sehore & Bhopal',
 
-  dinnerNote: 'रात्री भोजन त्यागी सूर्यास्त पूर्व आमंत्रित है',
+  dinnerNote: '',
 
   venues: {
     dharamshala: {
-      name: 'Jain Oswal Dharamshala',
-      address: 'Nayapura, Ujjain',
-      shortAddress: 'Nayapura, Ujjain',
-      mapUrl: dharamshalaMaps,
-      appleMapsUrl:
-        'https://maps.apple.com/?q=Jain%20Oswal%20Dharamshala%20Nayapura%20Ujjain',
-      googleMapsUrl: dharamshalaMaps,
+      name: 'Venue — TBD',
+      address: 'TBD',
+      shortAddress: 'TBD',
+      mapUrl: sehoreMaps,
+      appleMapsUrl: 'https://maps.apple.com/?q=Sehore%20Madhya%20Pradesh',
+      googleMapsUrl: sehoreMaps,
     },
     hotel: {
-      name: 'Hotel Imperial Grand',
+      name: 'Shambhala Resort, Bhopal',
       address:
-        'Indore Road, near Hari Phatak overbridge, Ujjain',
-      shortAddress: 'Hari Phatak, Ujjain',
+        'Shambhala Resort, behind Campion School, Bhauri, Bhopal, Madhya Pradesh 462030',
+      shortAddress: 'Bhauri, Bhopal',
       mapUrl: hotelMaps,
       appleMapsUrl:
-        'https://maps.apple.com/?q=Hotel%20Imperial%20Grand%20Hari%20Phatak%20Ujjain',
+        'https://maps.apple.com/?q=Shambhala%20Resort%20Bhauri%20Bhopal',
       googleMapsUrl: hotelMaps,
     },
   },
 
   celebrationDays: [
     {
-      day: 28 as const,
+      day: 24 as const,
       dayLabel: 'Day 01',
-      date: 'Saturday, 28 November 2026',
-      dateShort: '28 Nov',
+      date: 'Sunday, 24 January 2027',
+      dateShort: '24 Jan',
       venueKey: 'dharamshala' as const,
-      city: 'Ujjain',
-      events: [
-        { nameHi: 'माता पूजन', name: 'Mata Pujan', time: '9:30 AM' },
-        { nameHi: 'गणेश पूजन', name: 'Ganesh Pujan', time: '10:00 AM' },
-      ],
+      city: 'Sehore',
+      events: [{ nameHi: 'विवरण शीघ्र', name: 'Rituals — TBD', time: 'TBD' }],
     },
     {
-      day: 29 as const,
+      day: 25 as const,
       dayLabel: 'Day 02',
-      date: 'Sunday, 29 November 2026',
-      dateShort: '29 Nov',
+      date: 'Monday, 25 January 2027',
+      dateShort: '25 Jan',
       venueKey: 'hotel' as const,
-      city: 'Ujjain',
-      events: [
-        { nameHi: 'सगाई', name: 'Sagai', time: '11:30 AM' },
-        { nameHi: 'हल्दी', name: 'Haldi', time: '3:00 PM' },
-        { nameHi: 'महिला संगीत', name: 'Mahila Sangeet', time: '7:30 PM' },
-      ],
+      city: 'Bhopal',
+      events: [{ nameHi: 'हल्दी व उत्सव', name: 'Haldi & Celebrations — TBD', time: 'TBD' }],
     },
     {
-      day: 30 as const,
+      day: 26 as const,
       dayLabel: 'Day 03',
-      date: 'Monday, 30 November 2026',
-      dateShort: '30 Nov',
+      date: 'Tuesday, 26 January 2027',
+      dateShort: '26 Jan',
       venueKey: 'hotel' as const,
-      city: 'Ujjain',
-      events: [
-        { nameHi: 'बारात', name: 'Baraat', time: '10:00 AM' },
-        { nameHi: 'शुभ लग्न', name: 'Shubh Lagn', time: '12:30 PM' },
-        {
-          nameHi: 'आशीर्वाद समारोह एवं माधुर्यभोज',
-          name: 'Aashirwad Samaroh & Madhuryabhoj',
-          time: '7:30 PM onwards',
-          note: 'रात्री भोजन त्यागी सूर्यास्त पूर्व आमंत्रित है',
-        },
-      ],
+      city: 'Bhopal',
+      events: [{ nameHi: 'शुभ विवाह', name: 'Wedding — TBD', time: 'TBD' }],
     },
   ],
 
   calendarEvents: [
     {
-      day: 28 as const,
-      title: 'Yashika & Somya — Mata Pujan & Ganesh Pujan',
-      start: '20261128T093000',
-      end: '20261128T120000',
-      location: 'Jain Oswal Dharamshala, Nayapura, Ujjain',
-      description: 'Mata Pujan 9:30 AM · Ganesh Pujan 10:00 AM',
+      day: 24 as const,
+      title: 'Anushka & Atishay — Day 01 (TBD)',
+      start: '20270124T100000',
+      end: '20270124T210000',
+      location: 'Sehore, Madhya Pradesh',
+      description: 'Event timings TBD',
     },
     {
-      day: 29 as const,
-      title: 'Yashika & Somya — Sagai, Haldi & Mahila Sangeet',
-      start: '20261129T113000',
-      end: '20261129T230000',
-      location: 'Hotel Imperial Grand, Hari Phatak, Ujjain',
-      description: 'Sagai 11:30 AM · Haldi 3:00 PM · Mahila Sangeet 7:30 PM',
+      day: 25 as const,
+      title: 'Anushka & Atishay — Haldi & Celebrations (TBD)',
+      start: '20270125T100000',
+      end: '20270125T230000',
+      location: 'Shambhala Resort, Bhauri, Bhopal',
+      description: 'Event timings TBD',
     },
     {
-      day: 30 as const,
-      title: 'Yashika & Somya — Wedding & Aashirwad Samaroh',
-      start: '20261130T100000',
-      end: '20261130T230000',
-      location: 'Hotel Imperial Grand, Hari Phatak, Ujjain',
-      description:
-        'Baraat 10:00 AM · Shubh Lagn 12:30 PM · Blessings ceremony & dinner 7:30 PM. Guests who do not take the night meal are invited before sunset.',
+      day: 26 as const,
+      title: 'Anushka & Atishay — Wedding (TBD)',
+      start: '20270126T100000',
+      end: '20270126T230000',
+      location: 'Shambhala Resort, Bhauri, Bhopal',
+      description: 'Event timings TBD',
     },
   ],
 
   timeline: [
-    { time: '10:00 AM', title: 'Baraat', description: "Groom's procession arrives" },
-    { time: '12:30 PM', title: 'Shubh Lagn', description: 'Wedding ceremony begins' },
     {
-      time: '7:30 PM',
-      title: 'Blessings & dinner',
-      description: 'Aashirwad Samaroh & Madhuryabhoj — until you arrive',
+      time: 'TBD',
+      title: 'Wedding Day Schedule',
+      description: 'Event timings will be updated shortly',
     },
   ],
-  timelineVenue: 'Hotel Imperial Grand, Indore Road, near Hari Phatak overbridge, Ujjain',
+  timelineVenue:
+    'Shambhala Resort, behind Campion School, Bhauri, Bhopal, Madhya Pradesh 462030',
 
   travel: {
     title: 'Travel',
-    note: 'Yashika’s celebrations are in Ujjain (28–30 November).',
-    leaveIndoreOn29: '',
+    note: 'Celebrations are in Sehore (24 Jan 2027) and Bhopal (25–26 Jan 2027). Here’s how to reach.',
+    departureNote: '',
     modes: [
       {
         mode: 'Airport',
-        name: 'Devi Ahilya Bai Holkar Airport (IDR), Indore',
+        name: 'Raja Bhoj Airport (BHO)',
         detail:
-          'About 1 hour by cab to Ujjain. Jain Oswal Dharamshala (Nayapura) for 28 Nov; Hotel Imperial Grand (Hari Phatak) for 29–30 Nov.',
-        link: 'https://www.google.com/maps/search/?api=1&query=Devi+Ahilya+Bai+Holkar+Airport+Indore',
+          'Nearest airport for both cities — convenient cab access to Shambhala Resort, Bhauri (Bhopal) and Sehore.',
+        link: 'https://maps.app.goo.gl/eWYHCdR63BPjKtkt9',
       },
       {
         mode: 'Railway',
-        name: 'Ujjain Junction (UJN)',
+        name: 'Bhopal Junction (BPL) & Sehore (SEH)',
         detail:
-          'Closest station for all three days. Dharamshala (Nayapura) and Hotel Imperial Grand are a short ride from the junction.',
-        link: 'https://www.google.com/maps/search/?api=1&query=Ujjain+Junction+Railway+Station',
+          'For Sehore celebrations, arrive at Sehore (SEH). For 25–26 Jan events at Shambhala Resort, Bhopal Junction (BPL) is convenient.',
+        link: 'https://maps.app.goo.gl/DJTgRZw42XstVsGx8',
+        secondaryLabel: 'Sehore (SEH) →',
+        secondaryLink: 'https://maps.app.goo.gl/ZiiFvm6QW3wdHd6m9',
       },
       {
         mode: 'Bus',
-        name: 'Ujjain Bus Stand',
+        name: 'Bhopal ISBT & Sehore Bus Stand',
         detail:
-          'Regular buses from Indore (~1–1.5 hours) and across Madhya Pradesh.',
-        link: 'https://www.google.com/maps/search/?api=1&query=Ujjain+Bus+Stand',
+          'Regular interstate and local buses connect Bhopal and Sehore (approx. 1–1.5 hours). Convenient if you’re travelling within Madhya Pradesh.',
+        link: 'https://maps.app.goo.gl/DDGL2j8aJz19JQAh8',
       },
     ],
   },
@@ -212,100 +179,63 @@ export const bridePatrika = {
   faq: [
     {
       q: 'What time should I arrive?',
-      a: 'Please arrive 20–30 minutes early. Mata Pujan (28 Nov) by 9:00 AM at Jain Oswal Dharamshala, Nayapura. Sagai (29 Nov) by 11:00 AM. Baraat / Shubh Lagn (30 Nov) by 9:30–10:00 AM. Aashirwad Samaroh from 7:00 PM is comfortable.',
-    },
-    {
-      q: 'Where is 28 November?',
-      a: 'Jain Oswal Dharamshala, Nayapura, Ujjain — Mata Pujan 9:30 AM, Ganesh Pujan 10:00 AM.',
-    },
-    {
-      q: 'Where are 29 & 30 November?',
-      a: 'The card prints Hotel Imperial Grand (Indore Road, near Hari Phatak overbridge, Ujjain) under the 30 November block. 29 November and the 30 November baraat/lagna do not list a separate venue.',
-    },
-    {
-      q: 'If we do not take dinner at night?',
-      a: 'Guests who do not take the night meal are invited before sunset. (रात्री भोजन त्यागी सूर्यास्त पूर्व आमंत्रित है)',
+      a: 'Event timings are TBD and will be updated shortly.',
     },
     {
       q: 'What should I wear?',
-      a: 'Traditional Indian attire — festive for Haldi & Mahila Sangeet, elegant ethnic or formal for Shubh Lagn and Aashirwad Samaroh.',
+      a: 'Details TBD — festive Indian attire is encouraged.',
     },
   ],
 
   share: {
-    text: "You're invited to Yashika & Somya's wedding celebrations (28–30 Nov 2026, Ujjain). All details here:",
+    text: "You're invited to Anushka & Atishay's wedding celebrations (25-26 Jan 2027 Bhopal, MP). All details here:",
   },
 
   faqTip: '',
-  faqSubtitle: 'Venues, arrival times, and the night-meal note from the card',
+  faqSubtitle: 'Venues, arrival times, and celebration details (TBD)',
 
   dayChoices: [
-    { id: 'all' as const, title: 'All days', sub: '28, 29 & 30 November · Ujjain' },
-    { id: '29-30' as const, title: '29 & 30 only', sub: 'Sagai to Wedding · Ujjain' },
-    { id: '30' as const, title: '30 only', sub: 'Wedding day' },
+    { id: 'all' as const, title: 'All days', sub: '24, 25 & 26 January · Sehore & Bhopal' },
+    { id: '25-26' as const, title: '25 & 26 only', sub: 'Bhopal · Haldi to Wedding' },
+    { id: '26' as const, title: '26 only', sub: 'Wedding day' },
   ],
 
   people: [
     {
       title: 'Blessings of elders',
       note: 'Remembered with love',
-      names: [
-        'स्व. नीरू बेन–स्व. मदनलाल जी बम',
-        'स्व. सज्जन बेन–स्व. पवनकुमार जी छाजेड़',
-        'स्व. माणक बेन–स्व. जड़ावचन्द जी सुराणा',
-      ],
+      names: ['TBD'],
     },
     {
       title: 'With love & blessings',
-      names: [
-        'रखबचन्द जी',
-        'प्रेमचन्द जी',
-        'डॉ. विमलचन्द जी',
-        'विजयचन्द जी',
-        'हंसराज जी',
-        'मंगल लता बम',
-        'समस्त बम परिवार — नेवरी वाले',
-      ],
+      names: ['TBD'],
     },
     {
       title: 'Eager to welcome',
-      names: [
-        'श्रीमती संगीता–प्रकाश जी चोपड़ा — इन्दौर',
-        'श्रीमती हीरा–ललित जी डाबरिया — अजमेर',
-      ],
+      names: ['TBD'],
     },
     {
       title: 'Hosts',
       note: 'With the invitation',
-      names: ['सौ. प्रतिभा–दीपक बम', 'चि. चिराग बम'],
+      names: ['TBD'],
     },
     {
       title: 'Awaiting you',
-      names: ['रितिका', 'हर्षित', 'हर्षल', 'दिव्यता', 'नताशा'],
+      names: ['TBD'],
     },
     {
       title: 'Maternal family',
       note: 'As printed on the card',
-      names: [
-        'श्रीमती हुकम बाई–स्व. बाबूलाल जी — कंटक',
-        'स्व. हुकमचन्द जी',
-        'श्री श्रेणिक जी — कुरुक्षेत्र',
-        'श्री राजेन्द्र जी',
-        'स्व. ललित जी',
-        'अमित जी',
-        'सुमित जी',
-        'सिद्धार्थ जी — नावे',
-        'गौतम जी',
-        'श्रेयांश जी',
-        'वैभव जी',
-        'रौनक जी',
-        'कनिष्क',
-        'लुंकड़ परिवार, महिदपुर',
-      ],
+      names: ['TBD'],
     },
     {
-      title: "Somya's family",
-      names: ['श्रीमान रामेश्वर जी', 'पंकज जी', 'नीरज जी तिवारी', 'इन्दौर'],
+      title: "Atishay's family",
+      names: [
+        'Arvind Vishwakarma',
+        'Rekha Vishwakarma',
+        'Sandeep Vishwakarma',
+        'Rashmi Vishwakarma',
+      ],
     },
   ],
 } as const

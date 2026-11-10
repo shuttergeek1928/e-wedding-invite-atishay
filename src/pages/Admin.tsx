@@ -54,10 +54,10 @@ type BatchGuest = ParsedContact & {
 
 type Mode = 'person' | 'many' | 'group'
 
-const HISTORY_KEY = 'ys-invite-admin-history'
-const BATCH_KEY = 'ys-invite-admin-batch'
-const GATE_KEY = 'ys-invite-admin-ok'
-const GATE_PASS = 'yashika&somya'
+const HISTORY_KEY = 'aa-invite-admin-history'
+const BATCH_KEY = 'aa-invite-admin-batch'
+const GATE_KEY = 'aa-invite-admin-ok'
+const GATE_PASS = 'anushka&atishay'
 
 function loadHistory(): HistoryItem[] {
   try {
@@ -134,7 +134,7 @@ export default function Admin() {
   const batchInputRef = useRef<HTMLInputElement>(null)
 
   useEffect(() => {
-    document.title = 'Send Invites — Yashika & Somya'
+    document.title = 'Send Invites — Anushka & Atishay'
     const meta = document.createElement('meta')
     meta.name = 'robots'
     meta.content = 'noindex, nofollow'
@@ -499,7 +499,7 @@ export default function Admin() {
               onChange={(e) => setPass(e.target.value)}
               autoFocus
               autoComplete="current-password"
-              placeholder="yashika&somya"
+              placeholder="anushka&atishay"
             />
           </label>
           {gateError && (
