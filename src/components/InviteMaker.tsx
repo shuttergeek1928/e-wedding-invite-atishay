@@ -10,7 +10,7 @@ import {
 import './InviteMaker.css'
 
 export default function InviteMaker() {
-  const [name, setName] = useState('Gunjan Kubde')
+  const [name, setName] = useState('Guest Name')
   const [saparivar, setSaparivar] = useState(true)
   const [elders, setElders] = useState('')
   const [preset, setPreset] = useState('')
@@ -110,7 +110,7 @@ export default function InviteMaker() {
                 setPreset('')
                 setName(e.target.value)
               }}
-              placeholder="Gunjan Kubde"
+              placeholder="Guest Name"
             />
           </label>
 

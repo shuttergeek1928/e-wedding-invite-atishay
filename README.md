@@ -2,8 +2,8 @@
 
 React + Vite invitation site. Same UI on both domains; events and copy switch by hostname.
 
-- `wedding.st59.in` — Somya’s family (`src/config/wedding.ts`)
-- `wedding.yashikabum.in` — Yashika’s family (`src/config/bride.ts`)
+- `wedding.atishay.in` — Atishay’s family (`src/config/wedding.ts`)
+- `wedding.anushka.in` — Anushka’s family (`src/config/bride.ts`)
 
 ```bash
 npm install

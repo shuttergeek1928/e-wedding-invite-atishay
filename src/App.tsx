@@ -3,7 +3,6 @@ import Hero from './components/Hero'
 import ShareBar from './components/ShareBar'
 import Countdown from './components/Countdown'
 import Story from './components/Story'
-import OursNote from './components/OursNote'
 import Events from './components/Events'
 import Patrika from './components/Patrika'
 import Timeline from './components/Timeline'
@@ -22,7 +21,6 @@ export default function App() {
         <ShareBar />
         <Countdown />
         <Story />
-        <OursNote />
         <Events />
         <Patrika />
         <Timeline />

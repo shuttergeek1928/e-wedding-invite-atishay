@@ -1,0 +1,270 @@
+﻿ID,Category,Side / Scope,Field / Variable,File & Location,Current Value,New Value,Notes / Format Guidance
+001,Couple & Branding,Shared (Both),couple.partner1 (Groom First Name),src/config/wedding.ts:10; src/config/bride.ts:30,Somya,,"Displayed in Hero, Navbar, Footer"
+002,Couple & Branding,Shared (Both),couple.partner1Full (Groom Full Name),src/config/wedding.ts:12; src/config/bride.ts:32,Somya Tiwari,,Groom full name
+003,Couple & Branding,Shared (Both),couple.partner2 (Bride First Name),src/config/wedding.ts:11; src/config/bride.ts:31,Yashika,,"Displayed in Hero, Navbar, Footer (partner2 renders first)"
+004,Couple & Branding,Shared (Both),couple.partner2Full (Bride Full Name),src/config/wedding.ts:13; src/config/bride.ts:33,Yashika Bum,,Bride full name
+005,Couple & Branding,Shared (Both),couple.hashtag,src/config/wedding.ts:14; src/config/bride.ts:34,#YashikaAndSomya,,Wedding hashtag in footer
+006,Couple & Branding,Shared (Both),credit.line,src/config/wedding.ts:38,Crafted with love by Somya · vibe-coded for Yashika & family,,Footer credit line
+007,Domains & Host Config,Groom Side,weddingConfig.siteUrl,src/config/wedding.ts:6,https://wedding.st59.in,,Default live URL for groom side
+008,Domains & Host Config,Groom Side,hostFamilies.groom.label,src/config/sides.ts:27,Somya’s family,,Shown in /admin header
+009,Domains & Host Config,Groom Side,hostFamilies.groom.hosts,src/config/sides.ts:28,wedding.st59.in,,Hostname(s) that select groom side (no www.)
+010,Domains & Host Config,Groom Side,hostFamilies.groom.siteUrl,src/config/sides.ts:29,https://wedding.st59.in,,Canonical URL for groom side
+011,Domains & Host Config,Groom Side,hostFamilies.groom.inviteFrom / weddingConfig.inviteFrom,src/config/sides.ts:30; src/config/wedding.ts:45,Pankaj Tiwari & Family,,WhatsApp invite 'From ...' sign-off for groom side
+012,Domains & Host Config,Bride Side,hostFamilies.bride.label,src/config/sides.ts:34,Yashika’s family,,Shown in /admin header; leave blank if single-side only
+013,Domains & Host Config,Bride Side,hostFamilies.bride.hosts,src/config/sides.ts:35,wedding.yashikabum.in,,Hostname(s) that select bride side
+014,Domains & Host Config,Bride Side,hostFamilies.bride.siteUrl,src/config/sides.ts:36,https://wedding.yashikabum.in,,Canonical URL for bride side
+015,Domains & Host Config,Bride Side,hostFamilies.bride.inviteFrom / bridePatrika.inviteFromEn,src/config/sides.ts:37; src/config/bride.ts:54,Pratibha & Deepak Bum,,WhatsApp invite 'From ...' sign-off for bride side (English)
+016,Domains & Host Config,Bride Side,bridePatrika.inviteFrom (Hindi),src/config/bride.ts:53,प्रतिभा–दीपक बम,,Bride side sender name in Hindi
+017,Domains & Host Config,Shared (Both),?side= query aliases (Bride),src/config/sides.ts:51; src/hooks/useGuestInvite.ts:14-17,"yashika, bride, yb, bum",,URL preview aliases e.g. ?side=bride; keep in sync in both files
+018,Domains & Host Config,Shared (Both),?side= query aliases (Groom),src/config/sides.ts:54; src/hooks/useGuestInvite.ts:18-21,"somya, groom, st59, tiwari",,URL preview aliases e.g. ?side=groom; keep in sync in both files
+019,Dates & Countdown,Shared (Both),date.full,src/config/wedding.ts:18,"Monday, November 30, 2026",,Full wedding day date string
+020,Dates & Countdown,Shared (Both),date.short,src/config/wedding.ts:19,30 November 2026,,Shown in Hero and Footer
+021,Dates & Countdown,Shared (Both),date.iso,src/config/wedding.ts:20,2026-11-30T12:30:00,,Keep ISO format YYYY-MM-DDTHH:MM:SS (drives Countdown timer)
+022,Dates & Countdown,Shared (Both),date.foreverLabel,src/config/wedding.ts:21,days to forever,,Label above countdown (note: Countdown.tsx:49 also renders 'days to forever')
+023,"Hero, Blessings & Notes",Shared (Both),blessing (Top Invocation),src/config/wedding.ts:7; src/config/bride.ts:14,॥ श्री गणेशाय नमः ॥,,"Shown at top of Hero, Footer, Admin, RSVP, WhatsApp invites"
+024,"Hero, Blessings & Notes",Groom Side,hero.tagline,src/config/wedding.ts:25-26,"Together with their families, joyfully invite you to the wedding celebrations",,Line above couple names in Hero
+025,"Hero, Blessings & Notes",Groom Side,hero.closing,src/config/wedding.ts:27,As we begin our forever,,Line below couple names in Hero
+026,"Hero, Blessings & Notes",Bride Side,bridePatrika.hero.tagline,src/config/bride.ts:58-59,"Together with their families, joyfully invite you to the wedding celebrations",,Line above couple names in Hero (Bride view)
+027,"Hero, Blessings & Notes",Bride Side,bridePatrika.hero.closing,src/config/bride.ts:60,As we begin our forever,,Line below couple names in Hero (Bride view)
+028,"Hero, Blessings & Notes",Groom Side,ours.lines[0] (Hindi Note Line 1),src/config/wedding.ts:51,यह कोई सामान्य कार्ड नहीं — हमने इसे आपके लिए ही रखा है।,,Personal Hindi note line 1
+029,"Hero, Blessings & Notes",Groom Side,ours.lines[1] (Hindi Note Line 2),src/config/wedding.ts:52,आपके आने से हमारा घर पूरा लगेगा।,,Personal Hindi note line 2
+030,"Hero, Blessings & Notes",Groom Side,ours.signOff,src/config/wedding.ts:54,— याशिका व सोम्य,,Hindi note sign-off
+031,"Hero, Blessings & Notes",Bride Side,bridePatrika.ours.lines[0],src/config/bride.ts:65,"परिवार, जिनेन्द्र भगवान, कुलदेवी, देवता एवं पूर्वजों की कृपा से परिणय संस्कार का यह शुभ अवसर आया है।",,Bride side Hindi invitation note line 1
+032,"Hero, Blessings & Notes",Bride Side,bridePatrika.ours.lines[1],src/config/bride.ts:66,इस अवसर पर पधारकर वर-वधु को आशीर्वाद प्रदान कर हमें अनुगृहित करें।,,Bride side Hindi invitation note line 2
+033,"Hero, Blessings & Notes",Bride Side,bridePatrika.ours.signOff,src/config/bride.ts:68,— Yashika & Somya,,Bride side note sign-off
+034,"Hero, Blessings & Notes",Shared (Both),secret.title (Hidden Easter Egg),src/config/wedding.ts:31,A note just for you,,Opens on long-pressing logo or Konami code
+035,"Hero, Blessings & Notes",Shared (Both),secret.message,src/config/wedding.ts:32-33,If you found this — thank you for being part of our story. Your love got us here. See you under the mandap.,,Hidden Easter-egg modal message
+036,"Hero, Blessings & Notes",Shared (Both),secret.signOff,src/config/wedding.ts:34,— Somya & Yashika,,Hidden modal sign-off
+037,"Hero, Blessings & Notes",Shared (Both),footer.message,src/config/wedding.ts:271,Join us in celebrating as we begin our forever.,,Footer message
+038,"Hero, Blessings & Notes",Hardcoded UI,Footer hardcoded note,src/components/Footer.tsx:25,Your presence and blessings mean the world to us.,,Hardcoded in Footer.tsx
+039,"Hero, Blessings & Notes",Groom Side,share.text (Default WhatsApp share),src/config/wedding.ts:252,"You're invited to Yashika & Somya's wedding celebrations (27–30 Nov 2026, Indore & Ujjain). All details here:",,Used when clicking WhatsApp Share without a personal guest token
+040,"Hero, Blessings & Notes",Bride Side,bridePatrika.share.text,src/config/bride.ts:236,"You're invited to Yashika & Somya's wedding celebrations (28–30 Nov 2026, Ujjain). All details here:",,Used when clicking WhatsApp Share on Bride side
+041,Story & Milestones,Hardcoded UI,Story section kicker,src/components/Story.tsx:21,How we began,,Hardcoded above Story title (Groom side only)
+042,Story & Milestones,Groom Side,story.title,src/config/wedding.ts:58,Our Story,,Story section heading
+043,Story & Milestones,Hardcoded UI,Story section subtitle,src/components/Story.tsx:23,A friendship that became forever,,Hardcoded subtitle under Story title
+044,Story & Milestones,Groom Side,story.paragraphs[0],src/config/wedding.ts:60,"What began in 2015 as a simple friendship slowly grew into something deeper — built on trust, laughter, and countless shared moments.",,Paragraph 1 (you can add/remove paragraphs as needed)
+045,Story & Milestones,Groom Side,story.paragraphs[1],src/config/wedding.ts:61,"In 2018, friendship turned into love, and we chose to walk this journey together. Years of understanding and growing side by side brought us closer with every passing day.",,Paragraph 2
+046,Story & Milestones,Groom Side,story.paragraphs[2],src/config/wedding.ts:62,"In 2025, our families came together as we got rokafied. Now in 2026, we begin forever — and your presence would mean the world to us.",,Paragraph 3
+047,Story & Milestones,Groom Side,story.milestones[0] (Year | Event),src/config/wedding.ts:65,2015 | First met as friends,,Provide Year | Event (can add/remove milestones)
+048,Story & Milestones,Groom Side,story.milestones[1] (Year | Event),src/config/wedding.ts:66,2018 | Came into a relationship,,Provide Year | Event
+049,Story & Milestones,Groom Side,story.milestones[2] (Year | Event),src/config/wedding.ts:67,2025 | Got rokafied,,Provide Year | Event
+050,Story & Milestones,Groom Side,story.milestones[3] (Year | Event),src/config/wedding.ts:68,2026 | Our wedding,,Provide Year | Event
+051,Family & Patrika,Bride Side,bridePatrika.blessings,src/config/bride.ts:15-20,॥ श्री गणेशाय नमः ॥ | ॥ श्री दादागुरुदेव नमः ॥ | ॥ श्री महावीराय नमः ॥ | ॥ श्री अवन्ति पार्श्वनाथाय नमः ॥,,Printed invocations list (Patrika metadata)
+052,Family & Patrika,Bride Side,bridePatrika.invitationBlessings,src/config/bride.ts:21-25,॥ श्री मणिभद्राय नमः ॥ | ॥ श्री आदिनाथाय नमः ॥ | ॥ श्री गौतम स्वामी नमः ॥,,Additional printed invocations
+053,Family & Patrika,Bride Side,bridePatrika.mangalShlok,src/config/bride.ts:26-27,"मंगलम् भगवान वीरो, मंगलम् गौतम प्रभुः। मंगलम् स्थूलि भद्राद्यो, जैन धर्मोस्तु मंगलम्॥",,Shown in Patrika ('Our people') section
+054,Family & Patrika,Bride Side,bridePatrika.dinnerNote,"src/config/bride.ts:74, 138",रात्री भोजन त्यागी सूर्यास्त पूर्व आमंत्रित है,,Optional sunset/dinner note in FAQ & Reception event
+055,Family & Patrika,Bride Side,couple.bride.printed / printedEn,src/config/bride.ts:36-37,सौ. कां. याशिका | Yashika Bum,,Bride name with honorific in Hindi | English
+056,Family & Patrika,Bride Side,couple.bride.parents / parentsEn,src/config/bride.ts:38-39,श्रीमती प्रतिभा–दीपक बम | Pratibha & Deepak Bum,,Bride's parents in Hindi | English
+057,Family & Patrika,Bride Side,couple.bride.grandparents,src/config/bride.ts:40,स्व. श्रीमती नीरू बेन–स्व. श्री मदनलाल जी बम,,Bride's grandparents in Hindi
+058,Family & Patrika,Bride Side,couple.bride.city,src/config/bride.ts:41,Ujjain,,Bride's family city
+059,Family & Patrika,Bride Side,couple.groom.printed / printedEn,src/config/bride.ts:44-45,चि. सौम्य | Somya Tiwari,,Groom name with honorific in Hindi | English
+060,Family & Patrika,Bride Side,couple.groom.parents / parentsEn,src/config/bride.ts:46-47,श्रीमती पुष्पा–पंकज जी तिवारी | Pushpa & Pankaj Tiwari,,Groom's parents in Hindi | English
+061,Family & Patrika,Bride Side,couple.groom.grandparents,src/config/bride.ts:48,श्रीमती संगीता–रामेश्वर जी तिवारी,,Groom's grandparents in Hindi
+062,Family & Patrika,Bride Side,couple.groom.city,src/config/bride.ts:49,Indore,,Groom's family city
+063,Family & Patrika,Bride Side,bridePatrika.hosts,src/config/bride.ts:55,सौ. प्रतिभा–दीपक बम | चि. चिराग बम,,Host names list
+064,Family & Patrika,Bride Side,people[0]: Blessings of elders,src/config/bride.ts:249-257,"Title: Blessings of elders (Remembered with love)
+Names: स्व. नीरू बेन–स्व. मदनलाल जी बम · स्व. सज्जन बेन–स्व. पवनकुमार जी छाजेड़ · स्व. माणक बेन–स्व. जड़ावचन्द जी सुराणा",,Note: Patrika.tsx currently renders only on Bride side; can enable for Groom side too if desired
+065,Family & Patrika,Bride Side,people[1]: With love & blessings,src/config/bride.ts:258-269,"Title: With love & blessings
+Names: रखबचन्द जी · प्रेमचन्द जी · डॉ. विमलचन्द जी · विजयचन्द जी · हंसराज जी · मंगल लता बम · समस्त बम परिवार — नेवरी वाले",,Patrika family group
+066,Family & Patrika,Bride Side,people[2]: Eager to welcome,src/config/bride.ts:270-276,"Title: Eager to welcome
+Names: श्रीमती संगीता–प्रकाश जी चोपड़ा — इन्दौर · श्रीमती हीरा–ललित जी डाबरिया — अजमेर",,Patrika family group (दर्शनाभिलाषी)
+067,Family & Patrika,Bride Side,people[3]: Hosts,src/config/bride.ts:277-281,"Title: Hosts (With the invitation)
+Names: सौ. प्रतिभा–दीपक बम · चि. चिराग बम",,Patrika hosts group (विनीत)
+068,Family & Patrika,Bride Side,people[4]: Awaiting you,src/config/bride.ts:282-285,"Title: Awaiting you
+Names: रितिका · हर्षित · हर्षल · दिव्यता · नताशा",,Patrika younger family members (प्रतीक्षारत)
+069,Family & Patrika,Bride Side,people[5]: Maternal family,src/config/bride.ts:286-305,"Title: Maternal family (As printed on the card)
+Names: श्रीमती हुकम बाई–स्व. बाबूलाल जी — कंटक · स्व. हुकमचन्द जी · श्री श्रेणिक जी — कुरुक्षेत्र · श्री राजेन्द्र जी · स्व. ललित जी · अमित जी · सुमित जी · सिद्धार्थ जी — नावे · गौतम जी · श्रेयांश जी · वैभव जी · रौनक जी · कनिष्क · लुंकड़ परिवार, महिदपुर",,Patrika maternal family (मामाजी / ननिहाल पक्ष)
+070,Family & Patrika,Bride Side,people[6]: Groom's family,src/config/bride.ts:306-309,"Title: Somya's family
+Names: श्रीमान रामेश्वर जी · पंकज जी · नीरज जी तिवारी · इन्दौर",,Patrika groom family summary
+071,Venues,Groom Side,venues.home.name,src/config/wedding.ts:74,Residence,,Venue 1 name (used on Day 01 & Day 02)
+072,Venues,Groom Side,venues.home.address & shortAddress,src/config/wedding.ts:75-77,"Full: 34, Ghisaji Patel Nagar, behind Devi Dham Temple, Bicholi Mardana Road, Indore
+Short: Bicholi Mardana, Indore",,Full & short address
+073,Venues,Groom Side,venues.home Map Links (Google & Apple),src/config/wedding.ts:78-81,"Google: https://maps.app.goo.gl/Z7r83DqQ7PmAzMMx8
+Apple: https://maps.apple.com/?q=34%20Ghisaji%20Patel%20Nagar%20Bicholi%20Mardana%20Indore",,Google Maps and Apple Maps URLs
+074,Venues,Groom Side,venues.hotel.name,src/config/wedding.ts:84,Hotel Imperial Grand,,Venue 2 name (used on Day 03 & Day 04)
+075,Venues,Groom Side,venues.hotel.address & shortAddress,src/config/wedding.ts:85-86,"Full: Hari Phatak Indore Road, Imperial Square, Ujjain
+Short: Imperial Square, Ujjain",,Full & short address
+076,Venues,Groom Side,venues.hotel Map Links (Google & Apple),src/config/wedding.ts:87-90,"Google: https://maps.app.goo.gl/FYgbohYaJWyP8ij26
+Apple: https://maps.apple.com/?q=Hotel%20Imperial%20Grand%20Imperial%20Square%20Ujjain",,Google Maps and Apple Maps URLs
+077,Venues,Bride Side,"bridePatrika.venues.dharamshala (Name, Address, Maps)",src/config/bride.ts:77-85,"Name: Jain Oswal Dharamshala
+Address: Nayapura, Ujjain
+Google: https://www.google.com/maps/search/?api=1&query=Jain+Oswal+Dharamshala+Nayapura+Ujjain
+Apple: https://maps.apple.com/?q=Jain%20Oswal%20Dharamshala%20Nayapura%20Ujjain",,Bride side Day 01 venue (skip if single-side only)
+078,Venues,Bride Side,"bridePatrika.venues.hotel (Name, Address, Maps)",src/config/bride.ts:86-95,"Name: Hotel Imperial Grand
+Address: Indore Road, near Hari Phatak overbridge, Ujjain
+Short: Hari Phatak, Ujjain
+Google: https://maps.app.goo.gl/FYgbohYaJWyP8ij26
+Apple: https://maps.apple.com/?q=Hotel%20Imperial%20Grand%20Hari%20Phatak%20Ujjain",,Bride side Day 02 & 03 venue
+079,Functions / Events,Groom Side,eventsTitle & eventsSubtitle,src/config/site.ts:96-97,"Title: Wedding Events
+Subtitle: Four days of rituals and joy across Indore and Ujjain",,Events section header (Groom side)
+080,Functions / Events,Bride Side,bridePatrika.eventsTitle & eventsSubtitle,src/config/bride.ts:71-72,"Title: Wedding Events
+Subtitle: Three days of rituals and joy in Ujjain · 28–30 November 2026",,Events section header (Bride side)
+081,Functions / Events,Groom Side,celebrationDays[0] (Day 01),src/config/wedding.ts:95-106,"day: 27 | Date: Friday, 27 November 2026 (27 Nov) | Venue: home | City: Indore
+Events:
+- माता पूजन / Mata Pujan — 10:00 AM
+- गणेश पूजन / Ganesh Pujan — 7:00 PM",,"Can add/remove days & functions; list Date, City, Venue, Hindi name, English name, Time"
+082,Functions / Events,Groom Side,celebrationDays[1] (Day 02),src/config/wedding.ts:107-115,"day: 28 | Date: Saturday, 28 November 2026 (28 Nov) | Venue: home | City: Indore
+Events:
+- मंडप / Mandap — 12:00 PM",,Day 02 functions
+083,Functions / Events,Groom Side,celebrationDays[2] (Day 03),src/config/wedding.ts:116-128,"day: 29 | Date: Sunday, 29 November 2026 (29 Nov) | Venue: hotel | City: Ujjain
+Events:
+- सगाई / Sagai — 10:30 AM
+- हल्दी / Haldi — 2:30 PM
+- संगीत / Sangeet — 7:30 PM",,Day 03 functions
+084,Functions / Events,Groom Side,celebrationDays[3] (Day 04),src/config/wedding.ts:129-141,"day: 30 | Date: Monday, 30 November 2026 (30 Nov) | Venue: hotel | City: Ujjain
+Events:
+- बारात / Baraat — 10:00 AM
+- शुभ लग्न / Shubh Lagn — 12:30 PM
+- रिसेप्शन / Reception — 7:30 PM onwards",,Day 04 functions
+085,Functions / Events,Bride Side,bridePatrika.celebrationDays[0] (Day 01),src/config/bride.ts:99-110,"day: 28 | Date: Saturday, 28 November 2026 (28 Nov) | Venue: dharamshala | City: Ujjain
+Events:
+- माता पूजन / Mata Pujan — 9:30 AM
+- गणेश पूजन / Ganesh Pujan — 10:00 AM",,Bride Day 01 functions
+086,Functions / Events,Bride Side,bridePatrika.celebrationDays[1] (Day 02),src/config/bride.ts:111-123,"day: 29 | Date: Sunday, 29 November 2026 (29 Nov) | Venue: hotel | City: Ujjain
+Events:
+- सगाई / Sagai — 11:30 AM
+- हल्दी / Haldi — 3:00 PM
+- महिला संगीत / Mahila Sangeet — 7:30 PM",,Bride Day 02 functions
+087,Functions / Events,Bride Side,bridePatrika.celebrationDays[2] (Day 03),src/config/bride.ts:124-141,"day: 30 | Date: Monday, 30 November 2026 (30 Nov) | Venue: hotel | City: Ujjain
+Events:
+- बारात / Baraat — 10:00 AM
+- शुभ लग्न / Shubh Lagn — 12:30 PM
+- आशीर्वाद समारोह एवं माधुर्यभोज / Aashirwad Samaroh & Madhuryabhoj — 7:30 PM onwards (note: रात्री भोजन त्यागी सूर्यास्त पूर्व आमंत्रित है)",,Bride Day 03 functions
+088,Calendar (.ics),Groom Side,calendarEvents[0] (Day 27),src/config/wedding.ts:145-153,"Title: Yashika & Somya — Mata Pujan & Ganesh Pujan
+Start–End: 20261127T100000 – 20261127T210000
+Location: 34, Ghisaji Patel Nagar, Bicholi Mardana, Indore
+Desc: Mata Pujan 10:00 AM · Ganesh Pujan 7:00 PM",,"Auto-derived from your new functions/dates if you leave blank, or specify overrides"
+089,Calendar (.ics),Groom Side,calendarEvents[1] (Day 28),src/config/wedding.ts:154-162,"Title: Yashika & Somya — Mandap
+Start–End: 20261128T120000 – 20261128T150000
+Location: 34, Ghisaji Patel Nagar, Bicholi Mardana, Indore
+Desc: Mandap ceremony at 12:00 PM",,Day 2 calendar entry
+090,Calendar (.ics),Groom Side,calendarEvents[2] (Day 29),src/config/wedding.ts:163-171,"Title: Yashika & Somya — Sagai, Haldi & Sangeet
+Start–End: 20261129T103000 – 20261129T230000
+Location: Hotel Imperial Grand, Imperial Square, Ujjain
+Desc: Sagai 10:30 AM · Haldi 2:30 PM · Sangeet 7:30 PM",,Day 3 calendar entry
+091,Calendar (.ics),Groom Side,calendarEvents[3] (Day 30),src/config/wedding.ts:172-180,"Title: Yashika & Somya — Wedding & Reception
+Start–End: 20261130T100000 – 20261130T230000
+Location: Hotel Imperial Grand, Imperial Square, Ujjain
+Desc: Baraat 10:00 AM · Shubh Lagn 12:30 PM · Reception 7:30 PM",,Day 4 calendar entry
+092,Calendar (.ics),Bride Side,bridePatrika.calendarEvents[0] (Day 28),src/config/bride.ts:145-152,"Title: Yashika & Somya — Mata Pujan & Ganesh Pujan
+Start–End: 20261128T093000 – 20261128T120000
+Location: Jain Oswal Dharamshala, Nayapura, Ujjain
+Desc: Mata Pujan 9:30 AM · Ganesh Pujan 10:00 AM",,Bride Day 1 calendar entry
+093,Calendar (.ics),Bride Side,bridePatrika.calendarEvents[1] (Day 29),src/config/bride.ts:153-160,"Title: Yashika & Somya — Sagai, Haldi & Mahila Sangeet
+Start–End: 20261129T113000 – 20261129T230000
+Location: Hotel Imperial Grand, Hari Phatak, Ujjain
+Desc: Sagai 11:30 AM · Haldi 3:00 PM · Mahila Sangeet 7:30 PM",,Bride Day 2 calendar entry
+094,Calendar (.ics),Bride Side,bridePatrika.calendarEvents[2] (Day 30),src/config/bride.ts:161-169,"Title: Yashika & Somya — Wedding & Aashirwad Samaroh
+Start–End: 20261130T100000 – 20261130T230000
+Location: Hotel Imperial Grand, Hari Phatak, Ujjain
+Desc: Baraat 10:00 AM · Shubh Lagn 12:30 PM · Blessings ceremony & dinner 7:30 PM. Guests who do not take the night meal are invited before sunset.",,Bride Day 3 calendar entry
+095,Wedding-Day Timeline,Hardcoded UI,Timeline section heading,src/components/Timeline.tsx:18,30 November Schedule,,Hardcoded heading in Timeline.tsx (needs new wedding date)
+096,Wedding-Day Timeline,Shared (Both),timelineVenue,src/config/site.ts:90; src/config/bride.ts:181,"Groom: Hotel Imperial Grand, Imperial Square, Ujjain
+Bride: Hotel Imperial Grand, Indore Road, near Hari Phatak overbridge, Ujjain",,Subtitle below Wedding Day Schedule heading
+097,Wedding-Day Timeline,Groom Side,timeline[0],src/config/wedding.ts:184,10:00 AM | Baraat | Groom's procession arrives,,Format: Time | Title | Description
+098,Wedding-Day Timeline,Groom Side,timeline[1],src/config/wedding.ts:185,12:30 PM | Shubh Lagn | Wedding ceremony begins,,Format: Time | Title | Description
+099,Wedding-Day Timeline,Groom Side,timeline[2],src/config/wedding.ts:186,3:00 PM | Lunch & Photos | Celebrate with family,,Format: Time | Title | Description
+100,Wedding-Day Timeline,Groom Side,timeline[3],src/config/wedding.ts:187,"7:30 PM | Reception | Dinner, blessings & celebration",,Format: Time | Title | Description
+101,Wedding-Day Timeline,Bride Side,bridePatrika.timeline[0],src/config/bride.ts:173,10:00 AM | Baraat | Groom's procession arrives,,Bride side wedding-day timeline item 1
+102,Wedding-Day Timeline,Bride Side,bridePatrika.timeline[1],src/config/bride.ts:174,12:30 PM | Shubh Lagn | Wedding ceremony begins,,Bride side wedding-day timeline item 2
+103,Wedding-Day Timeline,Bride Side,bridePatrika.timeline[2],src/config/bride.ts:175-179,7:30 PM | Blessings & dinner | Aashirwad Samaroh & Madhuryabhoj — until you arrive,,Bride side wedding-day timeline item 3
+104,Travel,Groom Side,travel.title & travel.note,src/config/wedding.ts:191-192,"Title: Travel
+Note: Celebrations are in Indore (27–28 Nov) and Ujjain (29–30 Nov). Here’s how to reach.",,Travel section header & overview
+105,Travel,Groom Side,travel.leaveIndoreOn29 (Departure Banner),src/config/wedding.ts:193-194,On 29 November we leave Indore by 8:00 AM for Ujjain (Sagai begins 10:30 AM at Hotel Imperial Grand). Plan to be ready and on the road early.,,Special departure banner; leave blank if single-city wedding
+106,Travel,Groom Side,travel.modes[0] (Airport),src/config/wedding.ts:196-202,"Mode: Airport
+Name: Devi Ahilya Bai Holkar Airport (IDR), Indore
+Detail: Nearest airport for both cities. About 45 minutes to the Indore venue, and about 1 hour to Hotel Imperial Grand, Ujjain by cab.
+Link: https://www.google.com/maps/search/?api=1&query=Devi+Ahilya+Bai+Holkar+Airport+Indore",,Nearest airport details + Google Maps link
+107,Travel,Groom Side,travel.modes[1] (Railway),src/config/wedding.ts:203-209,"Mode: Railway
+Name: Indore Junction (INDB) & Ujjain Junction (UJN)
+Detail: For 27–28 Nov events, arrive at Indore Junction. For 29–30 Nov events, Ujjain Junction is closest to Hotel Imperial Grand (~15–20 min).
+Link: https://www.google.com/maps/search/?api=1&query=Ujjain+Junction+Railway+Station",,Nearest railway station details + map link
+108,Travel,Groom Side,travel.modes[2] (Bus),src/config/wedding.ts:210-216,"Mode: Bus
+Name: Indore ISBT & Ujjain Bus Stand
+Detail: Regular interstate and local buses connect Indore and Ujjain (approx. 1–1.5 hours). Convenient if you’re travelling within Madhya Pradesh.
+Link: https://www.google.com/maps/search/?api=1&query=Ujjain+Bus+Stand",,Nearest bus stand / road details + map link
+109,Travel,Bride Side,bridePatrika.travel.title & note,src/config/bride.ts:184-186,"Title: Travel
+Note: Yashika’s celebrations are in Ujjain (28–30 November).",,Bride side travel overview
+110,Travel,Bride Side,bridePatrika.travel.modes[0] (Airport),src/config/bride.ts:188-194,"Mode: Airport
+Name: Devi Ahilya Bai Holkar Airport (IDR), Indore
+Detail: About 1 hour by cab to Ujjain. Jain Oswal Dharamshala (Nayapura) for 28 Nov; Hotel Imperial Grand (Hari Phatak) for 29–30 Nov.
+Link: https://www.google.com/maps/search/?api=1&query=Devi+Ahilya+Bai+Holkar+Airport+Indore",,Bride side airport info
+111,Travel,Bride Side,bridePatrika.travel.modes[1] (Railway),src/config/bride.ts:195-201,"Mode: Railway
+Name: Ujjain Junction (UJN)
+Detail: Closest station for all three days. Dharamshala (Nayapura) and Hotel Imperial Grand are a short ride from the junction.
+Link: https://www.google.com/maps/search/?api=1&query=Ujjain+Junction+Railway+Station",,Bride side railway info
+112,Travel,Bride Side,bridePatrika.travel.modes[2] (Bus),src/config/bride.ts:202-208,"Mode: Bus
+Name: Ujjain Bus Stand
+Detail: Regular buses from Indore (~1–1.5 hours) and across Madhya Pradesh.
+Link: https://www.google.com/maps/search/?api=1&query=Ujjain+Bus+Stand",,Bride side bus info
+113,Travel,Hardcoded UI,Travel.tsx hardcoded labels & overrides,src/components/Travel.tsx:24-57,"Chip labels: '28 Nov · Ujjain', '27–28 Nov · Indore', '30 Nov · Ujjain', '29–30 Nov · Ujjain'
+Subtitles: 'Wedding day is in Ujjain — Hotel Imperial Grand.', 'Celebrations on 29–30 Nov are in Ujjain.'
+Banner title: 'Leaving Indore · 29 November'",,Hardcoded city/date text in Travel.tsx
+114,FAQs,Groom Side,faqSubtitle & faqTip,src/config/site.ts:93-94,"Subtitle: Arrival times, travel tips, and the Indore → Ujjain plan
+Tip: (uses travel.leaveIndoreOn29)",,FAQ section subtitle & highlighted tip card
+115,FAQs,Hardcoded UI,Faq.tsx tip box labels,"src/components/Faq.tsx:25, 30",Groom label: '29 November travel' | Bride label: 'Night meal',,Hardcoded label above FAQ tip card
+116,FAQs,Groom Side,faq[0],src/config/wedding.ts:221-224,"Q: What time should I arrive?
+A: Please arrive 20–30 minutes before each ceremony. For Mata Pujan (27 Nov) be there by 9:30 AM. For Sagai (29 Nov) by 10:00 AM. For Baraat / Shubh Lagn (30 Nov) by 9:30–10:00 AM. For Reception, 7:00 PM is comfortable.",,Can add/edit/remove any number of FAQs
+117,FAQs,Groom Side,faq[1],src/config/wedding.ts:225-228,"Q: When do we leave Indore on 29 November?
+A: The family leaves Indore by 8:00 AM on 29 November for Ujjain. Sagai starts at 10:30 AM at Hotel Imperial Grand — please travel early so everyone settles in calmly.",,FAQ item 2
+118,FAQs,Groom Side,faq[2],src/config/wedding.ts:229-232,"Q: Indore → Ujjain travel tip?
+A: The drive is about 1–1.5 hours depending on traffic. Cab / private car is easiest for guests with elders. Trains and buses also run frequently between Indore and Ujjain.",,FAQ item 3
+119,FAQs,Groom Side,faq[3],src/config/wedding.ts:233-236,"Q: What should I wear?
+A: Traditional Indian attire is encouraged for all ceremonies — festive colors for Haldi & Sangeet, elegant ethnic or formal wear for Wedding & Reception.",,FAQ item 4
+120,FAQs,Groom Side,faq[4],src/config/wedding.ts:237-240,"Q: Is there parking?
+A: Street parking is available near the Indore residence. At Hotel Imperial Grand, Ujjain, hotel parking / nearby parking will be available for guests.",,FAQ item 5
+121,FAQs,Groom Side,faq[5],src/config/wedding.ts:241-244,"Q: Are kids welcome?
+A: Absolutely — little ones are part of the celebration. For longer evening functions, a quiet corner / early exit is totally fine.",,FAQ item 6
+122,FAQs,Groom Side,faq[6],src/config/wedding.ts:245-248,"Q: Who do I call if I’m lost?
+A: Reach out to Somya or the family host who invited you. Use the map buttons on this site — Google Maps and Apple Maps both work.",,FAQ item 7
+123,FAQs,Bride Side,bridePatrika.faqSubtitle,src/config/bride.ts:240,"Venues, arrival times, and the night-meal note from the card",,Bride side FAQ subtitle
+124,FAQs,Bride Side,bridePatrika.faq[0],src/config/bride.ts:213-216,"Q: What time should I arrive?
+A: Please arrive 20–30 minutes early. Mata Pujan (28 Nov) by 9:00 AM at Jain Oswal Dharamshala, Nayapura. Sagai (29 Nov) by 11:00 AM. Baraat / Shubh Lagn (30 Nov) by 9:30–10:00 AM. Aashirwad Samaroh from 7:00 PM is comfortable.",,Bride side FAQ 1
+125,FAQs,Bride Side,bridePatrika.faq[1],src/config/bride.ts:217-220,"Q: Where is 28 November?
+A: Jain Oswal Dharamshala, Nayapura, Ujjain — Mata Pujan 9:30 AM, Ganesh Pujan 10:00 AM.",,Bride side FAQ 2
+126,FAQs,Bride Side,bridePatrika.faq[2],src/config/bride.ts:221-224,"Q: Where are 29 & 30 November?
+A: The card prints Hotel Imperial Grand (Indore Road, near Hari Phatak overbridge, Ujjain) under the 30 November block. 29 November and the 30 November baraat/lagna do not list a separate venue.",,Bride side FAQ 3
+127,FAQs,Bride Side,bridePatrika.faq[3],src/config/bride.ts:225-228,"Q: If we do not take dinner at night?
+A: Guests who do not take the night meal are invited before sunset. (रात्री भोजन त्यागी सूर्यास्त पूर्व आमंत्रित है)",,Bride side FAQ 4
+128,FAQs,Bride Side,bridePatrika.faq[4],src/config/bride.ts:229-232,"Q: What should I wear?
+A: Traditional Indian attire — festive for Haldi & Mahila Sangeet, elegant ethnic or formal for Shubh Lagn and Aashirwad Samaroh.",,Bride side FAQ 5
+129,Blessings Wall,Shared (Both),blessings.title & subtitle,src/config/wedding.ts:256-257,"Title: Blessings Wall
+Subtitle: Leave a few words for the couple — your love is the gift",,Blessings section heading & subtitle
+130,Blessings Wall,Shared (Both),blessings.seed[0],src/config/wedding.ts:259-262,"Family: May your life together be filled with laughter, health, and endless chai.",,Pre-populated blessing card 1
+131,Blessings Wall,Shared (Both),blessings.seed[1],src/config/wedding.ts:263-266,A friend: From friendship to forever — so happy for you both.,,Pre-populated blessing card 2
+132,Blessings Wall,Hardcoded UI,Blessings localStorage key,src/components/Blessings.tsx:9,ys-wedding-blessings,,Browser storage key (update initials e.g. ab-wedding-blessings)
+133,Invite Tokens & Day Filters,Groom Side,groomDayChoices (Admin & Filter),src/config/site.ts:32-36,"all: 'All days' ('27, 28, 29 & 30 November')
+29-30: '29 & 30 only' ('Ujjain · Sagai to Wedding')
+30: '30 only' ('Wedding day')",,Options for inviting guests to specific day subsets
+134,Invite Tokens & Day Filters,Bride Side,bridePatrika.dayChoices,src/config/bride.ts:242-246,"all: 'All days' ('28, 29 & 30 November · Ujjain')
+29-30: '29 & 30 only' ('Sagai to Wedding · Ujjain')
+30: '30 only' ('Wedding day')",,Bride side day filter presets
+135,Invite Tokens & Day Filters,Hardcoded UI,inviteDayOptions & day numbers,src/utils/invite.ts:26-46,"all -> [27, 28, 29, 30] ('All days · 27–30 Nov (Indore & Ujjain)')
+29-30 -> [29, 30] ('29 & 30 Nov only (Ujjain)')
+30 -> [30] ('30 Nov only (Wedding day)')",,Used when filtering celebrationDays & calendarEvents by invite token
+136,Invite Tokens & Day Filters,Hardcoded UI,inviteBook (Legacy short codes),src/utils/invite.ts:49-55,papa -> 'Papa' | mummy -> 'Mummy',,Optional short invite URL presets (?i=papa)
+137,Invite Tokens & Day Filters,Hardcoded UI,formatDaysSummary (EN) & formatDaysSummaryHi (HI),src/utils/invite.ts:175-199,"EN: '27–30 November 2026 · Indore & Ujjain', '28–30 November 2026 · Ujjain', '29 & 30 November 2026 · Ujjain', '30 November 2026 · Ujjain (Wedding day)'
+HI: '27–30 नवम्बर 2026 · इंदौर व उज्जैन', '28–30 नवम्बर 2026 · उज्जैन', '29 व 30 नवम्बर 2026 · उज्जैन', '30 नवम्बर 2026 · उज्जैन (शुभ विवाह)'",,Displayed in personalized welcome banner & WhatsApp invite message
+138,Invite Tokens & Day Filters,Hardcoded UI,"calendar.ts UID, PRODID & .ics filename","src/utils/calendar.ts:22, 37, 51","UID: @wedding.st59.in
+PRODID: -//Yashika & Somya Wedding//EN
+Filename: yashika-somya-wedding.ics",,Downloaded calendar invite metadata
+139,HTML & Assets,HTML / SEO,index.html <title>,index.html:24,Yashika & Somya — Wedding,,Browser tab title
+140,HTML & Assets,HTML / SEO,index.html meta description,index.html:10-11,"Somya Tiwari & Yashika Bum invite you to their wedding celebrations — 27–30 November 2026, Indore & Ujjain.",,Search & link preview description
+141,HTML & Assets,HTML / SEO,index.html og:title & og:description,index.html:13-17,"og:title: Yashika & Somya — Wedding
+og:description: Join us as we begin our forever. 30 November 2026.",,WhatsApp / social share link preview text
+142,HTML & Assets,HTML / SEO,Monogram PNGs & Favicon,public/brand/logo-ys.png; logo-ys-square.png; public/favicon.png,Gold 'YS' monogram PNG images,,"Give new couple initials (e.g., A & R) to regenerate or replace monogram images"
+143,HTML & Assets,Hardcoded UI,Hero.tsx monogram alt & aria-label,src/components/Hero.tsx:41-43,"aria-label: Yashika and Somya monogram. Press and hold for a secret note.
+alt: Yashika & Somya monogram",,Accessibility labels for Hero logo button
+144,HTML & Assets,HTML / Assets,public/favicon.svg,public/favicon.svg:1-4,SVG circle (#3a0f19) with 'YS' (#c9a36a),,Vector favicon initials
+145,HTML & Assets,Theme / Styling,CSS Palette & Fonts (index.css & index.html),"src/index.css:11-26; index.html:8, 21","Burgundy #3a0f19, Gold #c9a36a, Ink #f3e7d4; Fonts: Cormorant Garamond, Great Vibes, Outfit, Tiro Devanagari Hindi; florals floral-a/b.png & texture.jpg",,"Leave as-is to keep the exact look, or specify new colors"
+146,"Admin, RSVP & Tech",Admin / RSVP,Admin.tsx Gate Password & Keys,"src/pages/Admin.tsx:57-60, 137, 502","GATE_PASS: yashika&somya
+Title: Send Invites — Yashika & Somya
+Keys: ys-invite-admin-history, ys-invite-admin-batch, ys-invite-admin-ok",,New /admin password & storage key prefix
+147,"Admin, RSVP & Tech",Admin / RSVP,AdminRsvp.tsx DEFAULT_ACK,src/pages/AdminRsvp.tsx:39-40,Namaste {{name}} — we received your RSVP for Yashika & Somya’s wedding. Thank you. — Pankaj Tiwari & Family,,Default WhatsApp RSVP acknowledgement template
+148,"Admin, RSVP & Tech",Admin / RSVP,Rsvp.tsx Subtitle & Day Options,"src/pages/Rsvp.tsx:73, 148-150","Subtitle: Yashika & Somya · 27–30 November 2026
+Days: All days (27–30), 29 & 30 Nov (Ujjain), 30 Nov only",,Shown if VITE_RSVP_ENABLED=true
+149,"Admin, RSVP & Tech",Hardcoded UI,InviteMaker.tsx (Unused legacy component),"src/components/InviteMaker.tsx:13, 113",Gunjan Kubde,,Unused component; can update placeholder or delete
+150,"Admin, RSVP & Tech",Admin / RSVP,.env RSVP Flags,.env.example; .env.development.local; src/config/features.ts,"VITE_RSVP_ENABLED=false (prod) / true (dev)
+VITE_RSVP_ADMIN_TOKEN=local-rsvp-dev-token",,RSVP feature toggle & backend URL if using RSVP
+151,"Admin, RSVP & Tech",Tech / PWA,assetlinks.json & admin-manifest.json,public/.well-known/assetlinks.json; public/admin-manifest.json,package_name: in.st59.wedding.invite | PWA name: Wedding invites,,Android app link config (only needed if wrapping /admin as an Android TWA)
+152,"Admin, RSVP & Tech",Docs,README.md domain notes,README.md:5-6,wedding.st59.in — Somya’s family | wedding.yashikabum.in — Yashika’s family,,Repository documentation

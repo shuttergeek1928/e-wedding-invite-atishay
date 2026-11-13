@@ -6,7 +6,7 @@ import { formatGuestLine } from '../utils/invite'
 import './Rsvp.css'
 
 type Attending = 'yes' | 'no' | 'maybe'
-type Days = 'all' | '29-30' | '30'
+type Days = 'all' | '25-26' | '26'
 
 export default function Rsvp() {
   const invite = useGuestInvite()
@@ -70,7 +70,7 @@ export default function Rsvp() {
         </p>
         <h1>RSVP</h1>
         <p className="rsvp__sub">
-          Yashika & Somya · 27–30 November 2026
+          Atishay & Anushka · 24–26 January 2027
         </p>
         {greeting && (
           <p className="rsvp__hello" lang="hi">
@@ -145,9 +145,9 @@ export default function Rsvp() {
                 <legend>Which days?</legend>
                 {(
                   [
-                    ['all', 'All days (27–30)'],
-                    ['29-30', '29 & 30 Nov (Ujjain)'],
-                    ['30', '30 Nov only'],
+                    ['all', 'All days (24–26)'],
+                    ['25-26', '25 & 26 Jan (Bhopal)'],
+                    ['26', '26 Jan only'],
                   ] as const
                 ).map(([value, label]) => (
                   <label key={value} className="rsvp__radio">

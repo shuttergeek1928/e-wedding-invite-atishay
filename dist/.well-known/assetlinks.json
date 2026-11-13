@@ -3,7 +3,7 @@
     "relation": ["delegate_permission/common.handle_all_urls"],
     "target": {
       "namespace": "android_app",
-      "package_name": "in.st59.wedding.invite",
+      "package_name": "in.atishay.wedding.invite",
       "sha256_cert_fingerprints": [
         "80:22:4A:F4:6D:CA:B7:1E:6D:C5:11:18:57:4E:0E:2C:9C:27:C1:F9:84:54:C3:D9:E0:99:F0:EE:8F:F5:59:EB"
       ]

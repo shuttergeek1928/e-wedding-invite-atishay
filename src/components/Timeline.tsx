@@ -15,7 +15,7 @@ export default function Timeline() {
           <span>✦</span>
         </div>
         <p className="section-kicker reveal">Wedding day</p>
-        <h2 className="section-title reveal">30 November Schedule</h2>
+        <h2 className="section-title reveal">26 Jan 2027 Schedule</h2>
         <p className="section-subtitle reveal">
           {timelineVenue}
         </p>

@@ -6,7 +6,7 @@ import './Blessings.css'
 
 type Blessing = { name: string; message: string; at?: string; id?: string }
 
-const STORAGE_KEY = 'ys-wedding-blessings'
+const STORAGE_KEY = 'aa-wedding-blessings'
 
 function loadLocal(): Blessing[] {
   try {

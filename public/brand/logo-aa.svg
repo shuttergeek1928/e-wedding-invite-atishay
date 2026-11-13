@@ -1,0 +1,22 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 220 220" fill="none">
+  <defs>
+    <linearGradient id="goldGrad" x1="20" y1="20" x2="200" y2="200" gradientUnits="userSpaceOnUse">
+      <stop offset="0%" stop-color="#faecc9"/>
+      <stop offset="35%" stop-color="#dfbe7b"/>
+      <stop offset="70%" stop-color="#c4974c"/>
+      <stop offset="100%" stop-color="#9a712c"/>
+    </linearGradient>
+    <linearGradient id="goldGrad2" x1="50" y1="30" x2="190" y2="190" gradientUnits="userSpaceOnUse">
+      <stop offset="0%" stop-color="#fff5dc"/>
+      <stop offset="45%" stop-color="#e2bf7e"/>
+      <stop offset="85%" stop-color="#b6893e"/>
+      <stop offset="100%" stop-color="#8d6323"/>
+    </linearGradient>
+  </defs>
+  <circle cx="110" cy="110" r="98" stroke="url(#goldGrad)" stroke-width="2"/>
+  <circle cx="110" cy="110" r="90" stroke="url(#goldGrad)" stroke-width="0.9" stroke-dasharray="3 4" opacity="0.8"/>
+  <path d="M110 8 L114 14 L110 20 L106 14 Z" fill="url(#goldGrad)"/>
+  <path d="M110 200 L114 206 L110 212 L106 206 Z" fill="url(#goldGrad)"/>
+  <text x="86" y="136" text-anchor="middle" font-family="'Cormorant Garamond', Georgia, serif" font-size="96" font-weight="500" fill="url(#goldGrad)" opacity="0.95">A</text>
+  <text x="134" y="148" text-anchor="middle" font-family="'Cormorant Garamond', Georgia, serif" font-size="96" font-weight="500" fill="url(#goldGrad2)" stroke="#2a0a12" stroke-width="1.2">A</text>
+</svg>

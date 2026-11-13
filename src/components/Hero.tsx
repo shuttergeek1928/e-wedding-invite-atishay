@@ -8,9 +8,13 @@ import './Hero.css'
 
 export default function Hero() {
   const { couple, date } = weddingConfig
-  const { hero, blessing } = useSite()
+  const site = useSite()
+  const { hero, blessing } = site
   const { open, setOpen } = useKonamiSecret()
   const pressTimer = useRef<number | null>(null)
+
+  const first = site.family === 'groom' ? couple.partner1 : couple.partner2
+  const second = site.family === 'groom' ? couple.partner2 : couple.partner1
 
   const startPress = () => {
     pressTimer.current = window.setTimeout(() => setOpen(true), 1200)
@@ -38,9 +42,9 @@ export default function Hero() {
           onMouseLeave={endPress}
           onTouchStart={startPress}
           onTouchEnd={endPress}
-          aria-label="Yashika and Somya monogram. Press and hold for a secret note."
+          aria-label={`${first} and ${second} monogram. Press and hold for a secret note.`}
         >
-          <img src="/brand/logo-ys.png?v=4" alt="Yashika & Somya monogram" className="hero__logo" />
+          <img src="/brand/logo-aa.png?v=5" alt={`${first} & ${second} monogram`} className="hero__logo" />
         </button>
 
         <p
@@ -51,9 +55,9 @@ export default function Hero() {
         </p>
 
         <h1 className="hero__names fade-in">
-          <span className="hero__name">{couple.partner2}</span>
+          <span className="hero__name">{first}</span>
           <span className="hero__ampersand">&</span>
-          <span className="hero__name">{couple.partner1}</span>
+          <span className="hero__name">{second}</span>
         </h1>
 
         <p

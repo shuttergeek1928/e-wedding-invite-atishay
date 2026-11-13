@@ -1,12 +1,10 @@
 /**
  * Two host families, one website.
  *
- * wedding.st59.in  → Somya / Tiwari (groom) — current live site
- * wedding.yashikabum.in → Yashika / Bum (bride) — same UI, different events
+ * wedding.atishay.in → Atishay / Vishwakarma (groom)
+ * wedding.anushka.in → Anushka / Singh (bride)
  *
- * Preview bride side locally:  http://localhost:5173/?side=yashika
- *
- * UI/CSS stays shared. Clone the site only if Yashika’s side needs a different look.
+ * Preview bride side locally:  http://localhost:5173/?side=anushka
  */
 
 export type HostFamily = 'groom' | 'bride'
@@ -24,17 +22,17 @@ export type HostFamilyConfig = {
 export const hostFamilies: Record<HostFamily, HostFamilyConfig> = {
   groom: {
     id: 'groom',
-    label: "Somya’s family",
-    hosts: ['wedding.st59.in'],
-    siteUrl: 'https://wedding.st59.in',
-    inviteFrom: 'Pankaj Tiwari & Family',
+    label: 'atishay.family',
+    hosts: ['wedding.atishay.in'],
+    siteUrl: 'https://wedding.atishay.in',
+    inviteFrom: 'Arvind Vishwakarma & Family',
   },
   bride: {
     id: 'bride',
-    label: "Yashika’s family",
-    hosts: ['wedding.yashikabum.in'],
-    siteUrl: 'https://wedding.yashikabum.in',
-    inviteFrom: 'Pratibha & Deepak Bum',
+    label: 'Anushka Family',
+    hosts: ['wedding.anushka.in'],
+    siteUrl: 'https://wedding.anushka.in',
+    inviteFrom: 'Lt. Arvind Pratap Singh & Archana Singh',
   },
 }
 
@@ -48,10 +46,10 @@ export function resolveHostFamily(
 ): HostFamily {
   const params = new URLSearchParams(search || '')
   const from = (params.get('side') || '').toLowerCase()
-  if (from === 'yashika' || from === 'bride' || from === 'yb' || from === 'bum') {
+  if (from === 'anushka' || from === 'bride' || from === 'as' || from === 'tulip') {
     return 'bride'
   }
-  if (from === 'somya' || from === 'groom' || from === 'st59' || from === 'tiwari') {
+  if (from === 'atishay' || from === 'groom' || from === 'av' || from === 'dofu') {
     return 'groom'
   }
 

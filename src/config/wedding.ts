@@ -1,29 +1,30 @@
 // ============================================================
-//  Somya & Yashika — Wedding details (from invitation)
+//  Atishay & Anushka — Wedding details
 // ============================================================
 
 export const weddingConfig = {
-  siteUrl: "https://wedding.st59.in",
+  siteUrl: "https://wedding.atishay.in",
   blessing: "॥ श्री गणेशाय नमः ॥",
+  mangalShlok: "वक्रतुण्ड महाकाय सूर्यकोटि समप्रभ। निर्विघ्नं कुरु मे देव सर्वकार्येषु सर्वदा॥",
 
   couple: {
-    partner1: "Somya",
-    partner2: "Yashika",
-    partner1Full: "Somya Tiwari",
-    partner2Full: "Yashika Bum",
-    hashtag: "#YashikaAndSomya",
+    partner1: "Atishay",
+    partner2: "Anushka",
+    partner1Full: "Atishay Vishwakarma",
+    partner2Full: "Anushka Singh",
+    hashtag: "#Atishay&Anushka",
   },
 
   date: {
-    full: "Monday, November 30, 2026",
-    short: "30 November 2026",
-    iso: "2026-11-30T12:30:00",
-    foreverLabel: "days to forever",
+    full: "Tuesday, January 26, 2027",
+    short: "26 Jan, 2027, Tuesday",
+    iso: "2027-01-26T02:00:00",
+    foreverLabel: "77 calendar days",
   },
 
   hero: {
     tagline:
-      "Together with their families, joyfully invite you to the wedding celebrations",
+      "Bound by friendship, blessed by family, and united in love — together with their families, warmly invite you to celebrate the wedding of",
     closing: "As we begin our forever",
   },
 
@@ -31,41 +32,34 @@ export const weddingConfig = {
     title: "A note just for you",
     message:
       "If you found this — thank you for being part of our story. Your love got us here. See you under the mandap.",
-    signOff: "— Somya & Yashika",
+    signOff: "Atishay & Anushka",
   },
 
   credit: {
-    line: "Crafted with love by Somya · vibe-coded for Yashika & family",
+    line: "Forked with love by Atishay, thanks Somya for the support ;)",
   },
 
   /**
-   * Default WhatsApp sign-off (Somya / Tiwari).
+   * Default WhatsApp sign-off (Atishay / Vishwakarma).
    * Overridden per domain in src/config/sides.ts
    */
-  inviteFrom: "Pankaj Tiwari & Family",
+  inviteFrom: "Arvind Vishwakarma & Family",
 
-
-  /** Pure Hindi note — Malwa / Indian touch only */
   ours: {
-    lines: [
-      "यह कोई सामान्य कार्ड नहीं — हमने इसे आपके लिए ही रखा है।",
-      "आपके आने से हमारा घर पूरा लगेगा।",
-    ],
-    signOff: "— याशिका व सोम्य",
+    lines: [],
+    signOff: "",
   },
 
   story: {
     title: "Our Story",
     paragraphs: [
-      "What began in 2015 as a simple friendship slowly grew into something deeper — built on trust, laughter, and countless shared moments.",
-      "In 2018, friendship turned into love, and we chose to walk this journey together. Years of understanding and growing side by side brought us closer with every passing day.",
-      "In 2025, our families came together as we got rokafied. Now in 2026, we begin forever — and your presence would mean the world to us.",
+      "What began in 2014 as a simple friendship slowly grew into something deeper — built on trust, laughter, and countless shared moments.",
+      "In 2025, our families came together as we got rokafied. Now in January 2027, we are getting married.",
     ],
     milestones: [
       { year: "2015", event: "First met as friends" },
-      { year: "2018", event: "Came into a relationship" },
-      { year: "2025", event: "Got rokafied" },
-      { year: "2026", event: "Our wedding" },
+      { year: "2025", event: "Got Rokafied" },
+      { year: "2027", event: "Our Wedding" },
     ],
   },
 
@@ -73,184 +67,293 @@ export const weddingConfig = {
     home: {
       name: "Residence",
       address:
-        "34, Ghisaji Patel Nagar, behind Devi Dham Temple, Bicholi Mardana Road, Indore",
-      shortAddress: "Bicholi Mardana, Indore",
-      mapUrl: "https://maps.app.goo.gl/Z7r83DqQ7PmAzMMx8",
+        "Atishay Graphics House, In front of Kanchan Baag, Englishpura, Sehore",
+      shortAddress: "Englishpura, Sehore",
+      mapUrl: "https://maps.app.goo.gl/pzAYPqxePQGpVYHd6",
       appleMapsUrl:
-        "https://maps.apple.com/?q=34%20Ghisaji%20Patel%20Nagar%20Bicholi%20Mardana%20Indore",
-      googleMapsUrl: "https://maps.app.goo.gl/Z7r83DqQ7PmAzMMx8",
+        "https://maps.apple.com/?q=Atishay%20Graphics%20House%20Englishpura%20Sehore",
+      googleMapsUrl: "https://maps.app.goo.gl/pzAYPqxePQGpVYHd6",
     },
     hotel: {
-      name: "Hotel Imperial Grand",
-      address: "Hari Phatak Indore Road, Imperial Square, Ujjain",
-      shortAddress: "Imperial Square, Ujjain",
-      mapUrl: "https://maps.app.goo.gl/FYgbohYaJWyP8ij26",
+      name: "Shambhala Resort, Bhopal",
+      address:
+        "Shambhala Resort, behind Campion School, Bhauri, Bhopal, Madhya Pradesh 462030",
+      shortAddress: "Bhauri, Bhopal",
+      mapUrl: "https://maps.app.goo.gl/iBcFC3mSDBpUEXMB9",
       appleMapsUrl:
-        "https://maps.apple.com/?q=Hotel%20Imperial%20Grand%20Imperial%20Square%20Ujjain",
-      googleMapsUrl: "https://maps.app.goo.gl/FYgbohYaJWyP8ij26",
+        "https://maps.apple.com/?q=Shambhala%20Resort%20Bhauri%20Bhopal",
+      googleMapsUrl: "https://maps.app.goo.gl/iBcFC3mSDBpUEXMB9",
     },
   },
 
   celebrationDays: [
     {
-      day: 27 as const,
+      day: 24 as const,
       dayLabel: "Day 01",
-      date: "Friday, 27 November 2026",
-      dateShort: "27 Nov",
+      date: "Sunday, 24 January 2027",
+      dateShort: "24 Jan",
       venueKey: "home" as const,
-      city: "Indore",
+      city: "Sehore",
       events: [
-        { nameHi: "माता पूजन", name: "Mata Pujan", time: "10:00 AM", host: "groom" as const },
-        { nameHi: "गणेश पूजन", name: "Ganesh Pujan", time: "7:00 PM", host: "groom" as const },
+        {
+          nameHi: "श्री गणेश एवं माता पूजन",
+          name: "Ganesh & Mata Pujan",
+          time: "10:00 AM",
+          note: "Auspicious invocation and family rituals",
+          host: "groom" as const,
+        },
+        {
+          nameHi: "मण्डप आच्छादन",
+          name: "Mandap Ceremony",
+          time: "12:00 PM",
+          note: "Erecting the sacred wedding canopy",
+          host: "groom" as const,
+        },
+        {
+          nameHi: "घर की हल्दी",
+          name: "Ghar Ki Haldi",
+          time: "4:00 PM",
+          note: "Haldi rituals at our Sehore residence",
+          host: "groom" as const,
+        },
       ],
     },
     {
-      day: 28 as const,
+      day: 25 as const,
       dayLabel: "Day 02",
-      date: "Saturday, 28 November 2026",
-      dateShort: "28 Nov",
-      venueKey: "home" as const,
-      city: "Indore",
-      events: [{ nameHi: "मंडप", name: "Mandap", time: "12:00 PM", host: "groom" as const }],
-    },
-    {
-      day: 29 as const,
-      dayLabel: "Day 03",
-      date: "Sunday, 29 November 2026",
-      dateShort: "29 Nov",
+      date: "Monday, 25 January 2027",
+      dateShort: "25 Jan",
       venueKey: "hotel" as const,
-      city: "Ujjain",
+      city: "Bhopal",
       events: [
-        { nameHi: "सगाई", name: "Sagai", time: "10:30 AM", host: "groom" as const },
-        { nameHi: "हल्दी", name: "Haldi", time: "2:30 PM", host: "groom" as const },
-        { nameHi: "संगीत", name: "Sangeet", time: "7:30 PM", host: "groom" as const },
+        {
+          nameHi: "हल्दी उत्सव",
+          name: "Haldi Ceremony",
+          time: "12:00 PM – 1:00 PM",
+          note: "Joyful haldi celebrations with colors of celebration",
+          host: "groom" as const,
+        },
+        {
+          nameHi: "फलदान रस्म",
+          name: "Faldaan Ceremony",
+          time: "5:00 PM – 6:00 PM",
+          note: "Traditional blessing ceremony from bride's family",
+          host: "groom" as const,
+        },
+        {
+          nameHi: "अंगूठी रस्म एवं संगीत संध्या",
+          name: "Ring Ceremony & Sangeet",
+          time: "7:00 PM onwards",
+          note: "Ring exchange followed by musical night and dinner",
+          host: "groom" as const,
+        },
       ],
     },
     {
-      day: 30 as const,
-      dayLabel: "Day 04",
-      date: "Monday, 30 November 2026",
-      dateShort: "30 Nov",
+      day: 26 as const,
+      dayLabel: "Day 03",
+      date: "Tuesday, 26 January 2027",
+      dateShort: "26 Jan",
       venueKey: "hotel" as const,
-      city: "Ujjain",
+      city: "Bhopal",
       events: [
-        { nameHi: "बारात", name: "Baraat", time: "10:00 AM", host: "groom" as const },
-        { nameHi: "शुभ लग्न", name: "Shubh Lagn", time: "12:30 PM", host: "groom" as const },
-        { nameHi: "रिसेप्शन", name: "Reception", time: "7:30 PM onwards", host: "groom" as const },
+        {
+          nameHi: "निकासी एवं बारात",
+          name: "Baraat Procession",
+          time: "11:00 AM",
+          note: "Groom's procession departs and arrives with celebration",
+          host: "groom" as const,
+        },
+        {
+          nameHi: "तोरण आगमन",
+          name: "Toran Ceremony",
+          time: "1:00 PM",
+          note: "Auspicious welcome at the entrance",
+          host: "groom" as const,
+        },
+        {
+          nameHi: "वरमाला",
+          name: "Varmala Ceremony",
+          time: "2:00 PM",
+          note: "Sacred exchange of floral garlands",
+          host: "groom" as const,
+        },
+        {
+          nameHi: "पाणिग्रहण संस्कार एवं सप्तपदी",
+          name: "Phere & Wedding Rituals",
+          time: "2:30 PM onwards",
+          note: "Sacred pheras and vivah rituals following Varmala",
+          host: "groom" as const,
+        },
+        {
+          nameHi: "स्नेहभोज एवं रिसेप्शन",
+          name: "Reception & Dinner",
+          time: "8:00 PM onwards",
+          note: "Dinner, blessings & evening celebration",
+          host: "groom" as const,
+        },
       ],
     },
   ],
 
   calendarEvents: [
     {
-      day: 27 as const,
+      day: 24 as const,
       host: "groom" as const,
-      title: "Yashika & Somya — Mata Pujan & Ganesh Pujan",
-      start: "20261127T100000",
-      end: "20261127T210000",
-      location: "34, Ghisaji Patel Nagar, Bicholi Mardana, Indore",
-      description: "Mata Pujan 10:00 AM · Ganesh Pujan 7:00 PM",
+      title: "Atishay & Anushka — Sehore Celebrations",
+      start: "20270124T100000",
+      end: "20270124T200000",
+      location: "Atishay Graphics House, Englishpura, Sehore",
+      description: "Ganesh & Mata Pujan (10:00 AM) · Mandap (12:00 PM) · Ghar Ki Haldi (4:00 PM)",
     },
     {
-      day: 28 as const,
+      day: 25 as const,
       host: "groom" as const,
-      title: "Yashika & Somya — Mandap",
-      start: "20261128T120000",
-      end: "20261128T150000",
-      location: "34, Ghisaji Patel Nagar, Bicholi Mardana, Indore",
-      description: "Mandap ceremony at 12:00 PM",
+      title: "Atishay & Anushka — Haldi, Faldaan & Sangeet",
+      start: "20270125T120000",
+      end: "20270125T230000",
+      location: "Shambhala Resort, Bhauri, Bhopal",
+      description: "Haldi (12:00 PM) · Faldaan (5:00 PM) · Ring Ceremony & Sangeet (7:00 PM onwards)",
     },
     {
-      day: 29 as const,
+      day: 26 as const,
       host: "groom" as const,
-      title: "Yashika & Somya — Sagai, Haldi & Sangeet",
-      start: "20261129T103000",
-      end: "20261129T230000",
-      location: "Hotel Imperial Grand, Imperial Square, Ujjain",
-      description: "Sagai 10:30 AM · Haldi 2:30 PM · Sangeet 7:30 PM",
-    },
-    {
-      day: 30 as const,
-      host: "groom" as const,
-      title: "Yashika & Somya — Wedding & Reception",
-      start: "20261130T100000",
-      end: "20261130T230000",
-      location: "Hotel Imperial Grand, Imperial Square, Ujjain",
-      description: "Baraat 10:00 AM · Shubh Lagn 12:30 PM · Reception 7:30 PM",
+      title: "Atishay & Anushka — Wedding & Reception",
+      start: "20270126T110000",
+      end: "20270126T235900",
+      location: "Shambhala Resort, Bhauri, Bhopal",
+      description: "Baraat (11:00 AM) · Toran (1:00 PM) · Varmala (2:00 PM) · Phere (2:30 PM) · Reception (8:00 PM onwards)",
     },
   ],
 
   timeline: [
-    { time: "10:00 AM", title: "Baraat", description: "Groom's procession arrives" },
-    { time: "12:30 PM", title: "Shubh Lagn", description: "Wedding ceremony begins" },
-    { time: "3:00 PM", title: "Lunch & Photos", description: "Celebrate with family" },
-    { time: "7:30 PM", title: "Reception", description: "Dinner, blessings & celebration" },
+    {
+      time: "11:00 AM",
+      title: "Baraat Procession",
+      description: "Groom's grand procession arrives with dhol and celebration",
+    },
+    {
+      time: "1:00 PM",
+      title: "Toran Ceremony",
+      description: "Welcoming the groom at the resort entrance",
+    },
+    {
+      time: "2:00 PM",
+      title: "Varmala Ceremony",
+      description: "Exchange of sacred floral garlands",
+    },
+    {
+      time: "2:30 PM",
+      title: "Phere & Wedding Rituals",
+      description: "Sacred pheras and vivah rituals following Varmala",
+    },
+    {
+      time: "8:00 PM",
+      title: "Reception & Dinner",
+      description: "Grand reception, dinner, and blessings with family & friends",
+    },
   ],
 
   travel: {
     title: "Travel",
-    note: "Celebrations are in Indore (27–28 Nov) and Ujjain (29–30 Nov). Here’s how to reach.",
-    leaveIndoreOn29:
-      "On 29 November we leave Indore by 8:00 AM for Ujjain (Sagai begins 10:30 AM at Hotel Imperial Grand). Plan to be ready and on the road early.",
+    note: "Celebrations are in Sehore (24 Jan 2027) and Bhopal (25–26 Jan 2027). Here’s how to reach.",
+    departureNote:
+      "On 25 January morning, we leave Sehore for Shambhala Resort, Bhopal followed by the joyful Haldi ceremony at 12:00 PM.",
     modes: [
       {
         mode: "Airport",
-        name: "Devi Ahilya Bai Holkar Airport (IDR), Indore",
+        name: "Raja Bhoj Airport (BHO)",
         detail:
-          "Nearest airport for both cities. About 45 minutes to the Indore venue, and about 1 hour to Hotel Imperial Grand, Ujjain by cab.",
-        link: "https://www.google.com/maps/search/?api=1&query=Devi+Ahilya+Bai+Holkar+Airport+Indore",
+          "Nearest airport for both cities — convenient cab access to Shambhala Resort, Bhauri (Bhopal) and Sehore.",
+        link: "https://maps.app.goo.gl/eWYHCdR63BPjKtkt9",
       },
       {
         mode: "Railway",
-        name: "Indore Junction (INDB) & Ujjain Junction (UJN)",
+        name: "Bhopal Junction (BPL) & Sehore (SEH)",
         detail:
-          "For 27–28 Nov events, arrive at Indore Junction. For 29–30 Nov events, Ujjain Junction is closest to Hotel Imperial Grand (~15–20 min).",
-        link: "https://www.google.com/maps/search/?api=1&query=Ujjain+Junction+Railway+Station",
+          "For Sehore celebrations, arrive at Sehore (SEH). For 25–26 Jan events at Shambhala Resort, Bhopal Junction (BPL) is convenient.",
+        link: "https://maps.app.goo.gl/DJTgRZw42XstVsGx8",
+        secondaryLabel: "Sehore (SEH) →",
+        secondaryLink: "https://maps.app.goo.gl/ZiiFvm6QW3wdHd6m9",
       },
       {
         mode: "Bus",
-        name: "Indore ISBT & Ujjain Bus Stand",
+        name: "Bhopal ISBT & Sehore Bus Stand",
         detail:
-          "Regular interstate and local buses connect Indore and Ujjain (approx. 1–1.5 hours). Convenient if you’re travelling within Madhya Pradesh.",
-        link: "https://www.google.com/maps/search/?api=1&query=Ujjain+Bus+Stand",
+          "Regular interstate and local buses connect Bhopal and Sehore (approx. 1–1.5 hours). Convenient if you’re travelling within Madhya Pradesh.",
+        link: "https://maps.app.goo.gl/DDGL2j8aJz19JQAh8",
       },
     ],
   },
 
   faq: [
     {
-      q: "What time should I arrive?",
-      a: "Please arrive 20–30 minutes before each ceremony. For Mata Pujan (27 Nov) be there by 9:30 AM. For Sagai (29 Nov) by 10:00 AM. For Baraat / Shubh Lagn (30 Nov) by 9:30–10:00 AM. For Reception, 7:00 PM is comfortable.",
-    },
-    {
-      q: "When do we leave Indore on 29 November?",
-      a: "The family leaves Indore by 8:00 AM on 29 November for Ujjain. Sagai starts at 10:30 AM at Hotel Imperial Grand — please travel early so everyone settles in calmly.",
-    },
-    {
-      q: "Indore → Ujjain travel tip?",
-      a: "The drive is about 1–1.5 hours depending on traffic. Cab / private car is easiest for guests with elders. Trains and buses also run frequently between Indore and Ujjain.",
+      q: "What time should I arrive for the ceremonies?",
+      a: "For Sehore (24 Jan): Ganesh & Mata Pujan starts at 10:00 AM, Mandap at 12:00 PM, and Ghar Ki Haldi at 4:00 PM at our residence. For Bhopal (25 Jan): Haldi starts at 12:00 PM, Faldaan at 5:00 PM, and Ring Ceremony & Sangeet from 7:00 PM onwards. For Wedding Day (26 Jan): Baraat is at 11:00 AM, Varmala at 2:00 PM, and Reception from 8:00 PM onwards.",
     },
     {
       q: "What should I wear?",
-      a: "Traditional Indian attire is encouraged for all ceremonies — festive colors for Haldi & Sangeet, elegant ethnic or formal wear for Wedding & Reception.",
+      a: "Festive Indian attire is encouraged! Bright yellow & vibrant shades for Haldi, dazzling ethnic or Indo-western for Sangeet, and traditional or formal wear for the Baraat, Wedding, and Reception.",
     },
     {
-      q: "Is there parking?",
-      a: "Street parking is available near the Indore residence. At Hotel Imperial Grand, Ujjain, hotel parking / nearby parking will be available for guests.",
+      q: "When does the family travel from Sehore to Bhopal?",
+      a: "On the morning of 25 January, we leave Sehore for Shambhala Resort, Bhauri, Bhopal (~45 mins drive). The resort has ample guest parking and stay arrangements.",
     },
     {
-      q: "Are kids welcome?",
-      a: "Absolutely — little ones are part of the celebration. For longer evening functions, a quiet corner / early exit is totally fine.",
-    },
-    {
-      q: "Who do I call if I’m lost?",
-      a: "Reach out to Somya or the family host who invited you. Use the map buttons on this site — Google Maps and Apple Maps both work.",
+      q: "Who do I call if I need directions or help?",
+      a: "Reach out to Atishay or the family host who invited you. Both Google Maps and Apple Maps navigation links are available on this page for quick directions.",
     },
   ],
 
   share: {
-    text: "You're invited to Yashika & Somya's wedding celebrations (27–30 Nov 2026, Indore & Ujjain). All details here:",
+    text: "You're invited to Atishay & Anushka's wedding celebrations (24–26 Jan 2027 · Sehore & Bhopal). All details here:",
   },
+
+  people: [
+    {
+      title: "Parents / निवेदक",
+      note: "With the invitation",
+      names: ["Rekha & Arvind Vishwakarma"],
+    },
+    {
+      title: "Elders & Uncles / स्वागताकांक्षी",
+      note: "With love & blessings",
+      names: [
+        "KK Deepak & Archana Deepak (Tauji & Taiji)",
+        "JP Anand & Kiran Anand (Tauji & Taiji)",
+        "Sandeep & Rashmi Vishwakarma (Chacha & Chachi)",
+        "Dilip & Rekha Sharma (Fufaji & Bhuaji)",
+        "RB & Kamlesh Gaur (Fufaji & Bhuaji)",
+      ],
+    },
+    {
+      title: "Maternal Family / ननिहाल पक्ष",
+      note: "Nanaji, Mama-Mami & Mosaji-Mosi",
+      names: [
+        "AL Vishwakarma (Nanaji)",
+        "Sheshpal & Jyoti Vishwakarma (Mama & Mami)",
+        "Pankaj & Pushpa Tiwari (Mosaji & Mosi)",
+      ],
+    },
+    {
+      title: "Brothers & Sisters-in-law / स्नेही स्वजन",
+      names: [
+        "Haily & Risha Anand",
+        "Somya & Yashika Tiwari",
+        "Mohit & Rohit Vishwakarma",
+      ],
+    },
+    {
+      title: "Younger Siblings & Niece / बाल मनुहार",
+      note: "Eagerly awaiting your presence",
+      names: [
+        "Jainick (Younger Brother)",
+        "Kavya & Kanvi (Younger Sisters)",
+        "Shreya Tiwari (Cousin Sister)",
+        "Nusha (Niece)",
+      ],
+    },
+  ],
 
   blessings: {
     title: "Blessings Wall",

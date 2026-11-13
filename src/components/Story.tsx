@@ -22,12 +22,14 @@ export default function Story() {
         <h2 className="section-title reveal">{story.title}</h2>
         <p className="section-subtitle reveal">A friendship that became forever</p>
 
-        <div className="story__content">
-          <div className="story__text reveal">
-            {story.paragraphs.map((p, i) => (
-              <p key={i}>{p}</p>
-            ))}
-          </div>
+        <div className={`story__content ${story.paragraphs.length ? '' : 'story__content--timeline-only'}`}>
+          {Boolean(story.paragraphs.length) && (
+            <div className="story__text reveal">
+              {story.paragraphs.map((p, i) => (
+                <p key={i}>{p}</p>
+              ))}
+            </div>
+          )}
 
           <div className="story__timeline reveal">
             {story.milestones.map((m) => (
