@@ -134,7 +134,7 @@ export default function Admin() {
   const batchInputRef = useRef<HTMLInputElement>(null)
 
   useEffect(() => {
-    document.title = 'Send Invites — Anushka & Atishay'
+    document.title = 'Send Invites — Atishay & Anushka'
     const meta = document.createElement('meta')
     meta.name = 'robots'
     meta.content = 'noindex, nofollow'

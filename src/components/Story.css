@@ -60,6 +60,16 @@
   color: var(--color-muted);
 }
 
+.story__content--timeline-only {
+  display: flex;
+  justify-content: center;
+}
+
+.story__content--timeline-only .story__timeline {
+  max-width: 24rem;
+  width: 100%;
+}
+
 @media (max-width: 800px) {
   .story__content {
     grid-template-columns: 1fr;

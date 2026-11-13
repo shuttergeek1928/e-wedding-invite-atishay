@@ -12,7 +12,7 @@ export type InvitePayload = {
   s: boolean
   /** Elders named on the invite (optional), e.g. श्री …, श्रीमती … */
   e?: string[]
-  /** Days invited — all (23–26) · 25–26 · 26 only */
+  /** Days invited — all (24–26) · 25–26 · 26 only */
   d?: InviteDaySet
   /** Shared / WhatsApp-group invite (no personal name) */
   g?: boolean
@@ -30,8 +30,8 @@ export const inviteDayOptions: Array<{
 }> = [
   {
     id: 'all',
-    label: 'All days · 23–26 Jan (Sehore & Bhopal)',
-    days: [23, 24, 25, 26],
+    label: 'All days · 24–26 Jan (Sehore & Bhopal)',
+    days: [24, 25, 26],
   },
   {
     id: '25-26',
@@ -172,28 +172,16 @@ export function formatGuestLineEn(invite: InvitePayload): string {
 }
 
 /** Compact date line for messages / welcome */
-export function formatDaysSummary(d?: InviteDaySet, family?: HostFamily): string {
+export function formatDaysSummary(d?: InviteDaySet, _family?: HostFamily): string {
   const meta = daySetMeta(d)
-  const host = family || currentHostFamily()
-  if (host === 'bride') {
-    if (meta.id === 'all') return '24–26 January 2027 · Sehore & Bhopal'
-    if (meta.id === '25-26') return '25 & 26 January 2027 · Bhopal'
-    return '26 January 2027 · Bhopal (Wedding day)'
-  }
-  if (meta.id === 'all') return '23–26 January 2027 · Sehore & Bhopal'
+  if (meta.id === 'all') return '24–26 January 2027 · Sehore & Bhopal'
   if (meta.id === '25-26') return '25 & 26 January 2027 · Bhopal'
   return '26 January 2027 · Bhopal (Wedding day)'
 }
 
-export function formatDaysSummaryHi(d?: InviteDaySet, family?: HostFamily): string {
+export function formatDaysSummaryHi(d?: InviteDaySet, _family?: HostFamily): string {
   const meta = daySetMeta(d)
-  const host = family || currentHostFamily()
-  if (host === 'bride') {
-    if (meta.id === 'all') return '24–26 जनवरी 2027 · सीहोर व भोपाल'
-    if (meta.id === '25-26') return '25 व 26 जनवरी 2027 · भोपाल'
-    return '26 जनवरी 2027 · भोपाल (शुभ विवाह)'
-  }
-  if (meta.id === 'all') return '23–26 जनवरी 2027 · सीहोर व भोपाल'
+  if (meta.id === 'all') return '24–26 जनवरी 2027 · सीहोर व भोपाल'
   if (meta.id === '25-26') return '25 व 26 जनवरी 2027 · भोपाल'
   return '26 जनवरी 2027 · भोपाल (शुभ विवाह)'
 }

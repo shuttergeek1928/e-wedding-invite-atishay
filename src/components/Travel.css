@@ -1,5 +1,5 @@
 .travel {
-  background: var(--surface-band);
+  background: rgba(42, 10, 18, 0.35);
 }
 
 .travel__content,
@@ -19,8 +19,7 @@
 .venue-chip {
   border: 1px solid var(--color-line);
   padding: clamp(1.15rem, 2.5vw, 1.5rem);
-  background: var(--surface-card);
-  box-shadow: var(--shadow-card);
+  background: rgba(42, 10, 18, 0.92);
 }
 
 .venue-chip span {
@@ -49,8 +48,7 @@
 
 .travel__leave {
   border: 1px solid var(--color-line);
-  background: var(--surface-card);
-  box-shadow: var(--shadow-card);
+  background: rgba(42, 10, 18, 0.92);
   padding: 1.15rem 1.35rem;
   margin-bottom: 1.5rem;
   color: var(--color-muted);
@@ -90,8 +88,7 @@
 .travel-mode {
   border: 1px solid var(--color-line);
   padding: clamp(1.35rem, 3vw, 1.85rem);
-  background: var(--surface-card-strong);
-  box-shadow: var(--shadow-card);
+  background: rgba(42, 10, 18, 0.94);
 }
 
 .travel-mode__label {

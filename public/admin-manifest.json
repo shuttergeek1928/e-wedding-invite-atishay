@@ -4,8 +4,8 @@
   "start_url": "/admin",
   "scope": "/admin",
   "display": "standalone",
-  "background_color": "#faf4ea",
-  "theme_color": "#741c2e",
+  "background_color": "#2a0a12",
+  "theme_color": "#3a0f19",
   "share_target": {
     "action": "/admin",
     "method": "GET",

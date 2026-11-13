@@ -34,7 +34,7 @@ export function buildCalendarIcs(days?: InviteDaySet) {
   return [
     'BEGIN:VCALENDAR',
     'VERSION:2.0',
-    'PRODID:-//Anushka & Atishay Wedding//EN',
+    'PRODID:-//Atishay & Anushka Wedding//EN',
     'CALSCALE:GREGORIAN',
     'METHOD:PUBLISH',
     events,
@@ -48,7 +48,7 @@ export function downloadCalendar(days?: InviteDaySet) {
   const url = URL.createObjectURL(blob)
   const a = document.createElement('a')
   a.href = url
-  a.download = 'anushka-atishay-wedding.ics'
+  a.download = 'atishay-anushka-wedding.ics'
   a.click()
   URL.revokeObjectURL(url)
 }

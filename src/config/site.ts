@@ -38,8 +38,14 @@ export type TravelMode = {
   secondaryLink?: string
 }
 
+export type PeopleGroup = {
+  title: string
+  note?: string
+  names: readonly string[] | string[]
+}
+
 const groomDayChoices = [
-  { id: 'all' as const, title: 'All days', sub: '23, 24, 25 & 26 January' },
+  { id: 'all' as const, title: 'All days', sub: '24, 25 & 26 January · Sehore & Bhopal' },
   { id: '25-26' as const, title: '25 & 26 only', sub: 'Bhopal · Haldi to Wedding' },
   { id: '26' as const, title: '26 only', sub: 'Wedding day' },
 ]
@@ -75,7 +81,7 @@ export function getSiteContent(family: HostFamily) {
       eventsTitle: bridePatrika.eventsTitle,
       eventsSubtitle: bridePatrika.eventsSubtitle,
       dayChoices: bridePatrika.dayChoices,
-      people: bridePatrika.people,
+      people: bridePatrika.people as unknown as PeopleGroup[],
       mangalShlok: bridePatrika.mangalShlok,
       dinnerNote: bridePatrika.dinnerNote as string,
       footer: weddingConfig.footer,
@@ -87,7 +93,25 @@ export function getSiteContent(family: HostFamily) {
     family: 'groom' as const,
     blessing: weddingConfig.blessing,
     couple: weddingConfig.couple,
-    printedCouple: null,
+    printedCouple: {
+      ...weddingConfig.couple,
+      groom: {
+        printed: 'Atishay Vishwakarma',
+        printedEn: 'Atishay Vishwakarma',
+        parents: 'Rekha & Arvind Vishwakarma',
+        parentsEn: 'Rekha & Arvind Vishwakarma',
+        grandparents: 'Leela Devi Vishwakarma',
+        city: 'Sehore',
+      },
+      bride: {
+        printed: 'Anushka Singh',
+        printedEn: 'Anushka Singh',
+        parents: 'Archana & Lt. Arvind Pratap Singh',
+        parentsEn: 'Archana & Lt. Arvind Pratap Singh',
+        grandparents: '',
+        city: 'Sehore',
+      },
+    },
     date: weddingConfig.date,
     hero: weddingConfig.hero,
     ours: weddingConfig.ours,
@@ -109,10 +133,10 @@ export function getSiteContent(family: HostFamily) {
     faqSubtitle: 'Arrival times, travel tips, and celebration details',
     share: weddingConfig.share,
     eventsTitle: 'Wedding Events',
-    eventsSubtitle: 'Four days of rituals and joy across Sehore & Bhopal',
+    eventsSubtitle: 'Three days of rituals and joy across Sehore & Bhopal',
     dayChoices: groomDayChoices,
-    people: [] as typeof bridePatrika.people | [],
-    mangalShlok: '' as string,
+    people: weddingConfig.people as unknown as PeopleGroup[],
+    mangalShlok: weddingConfig.mangalShlok as string,
     dinnerNote: '' as string,
     footer: weddingConfig.footer,
     credit: weddingConfig.credit,

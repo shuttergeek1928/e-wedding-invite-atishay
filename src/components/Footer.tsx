@@ -5,7 +5,13 @@ import './Footer.css'
 
 export default function Footer() {
   const { couple, date, footer, credit } = weddingConfig
-  const { blessing } = useSite()
+  const site = useSite()
+  const { blessing } = site
+
+  const coupleNames =
+    site.family === 'groom'
+      ? `${couple.partner1} & ${couple.partner2}`
+      : `${couple.partner2} & ${couple.partner1}`
 
   return (
     <footer className="footer">
@@ -14,10 +20,10 @@ export default function Footer() {
         <p className="footer__blessing" lang="hi">
           {blessing}
         </p>
-        <img src="/brand/logo-aa.svg?v=1" alt="" className="footer__logo" />
+        <img src="/brand/logo-aa.png?v=5" alt="" className="footer__logo" />
         <p className="footer__invite">JOIN US IN CELEBRATING</p>
         <p className="footer__names">
-          {couple.partner2} & {couple.partner1}
+          {coupleNames}
         </p>
         <p className="footer__message">{footer.message}</p>
         <p className="footer__date">{date.short}</p>
@@ -27,7 +33,7 @@ export default function Footer() {
         <p className="footer__hashtag">{couple.hashtag}</p>
         <p className="footer__credit">{credit.line}</p>
         <p className="footer__copy">
-          &copy; {new Date().getFullYear()} {couple.partner2} & {couple.partner1}
+          &copy; {new Date().getFullYear()} {coupleNames}
         </p>
       </div>
     </footer>

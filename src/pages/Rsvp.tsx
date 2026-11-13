@@ -70,7 +70,7 @@ export default function Rsvp() {
         </p>
         <h1>RSVP</h1>
         <p className="rsvp__sub">
-          Anushka & Atishay · 24–26 January 2027
+          Atishay & Anushka · 24–26 January 2027
         </p>
         {greeting && (
           <p className="rsvp__hello" lang="hi">
@@ -145,7 +145,7 @@ export default function Rsvp() {
                 <legend>Which days?</legend>
                 {(
                   [
-                    ['all', 'All days (23–26)'],
+                    ['all', 'All days (24–26)'],
                     ['25-26', '25 & 26 Jan (Bhopal)'],
                     ['26', '26 Jan only'],
                   ] as const

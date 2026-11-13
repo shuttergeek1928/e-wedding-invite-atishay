@@ -6,6 +6,7 @@ import './Navbar.css'
 const allNavLinks = [
   { label: 'Story', href: '#story', groomOnly: true },
   { label: 'Events', href: '#events' },
+  { label: 'Family', href: '#patrika' },
   { label: 'Travel', href: '#travel' },
   { label: 'FAQ', href: '#faq' },
   { label: 'Blessings', href: '#blessings' },
@@ -37,9 +38,11 @@ export default function Navbar() {
     <nav className={`navbar ${scrolled || menuOpen ? 'navbar--solid' : ''}`}>
       <div className="navbar__inner container--wide">
         <a href="#home" className="navbar__brand" onClick={closeMenu}>
-          <img src="/brand/logo-aa-square.svg?v=1" alt="" className="navbar__logo" />
+          <img src="/brand/logo-aa-square.png?v=5" alt="" className="navbar__logo" />
           <span className="navbar__names">
-            {weddingConfig.couple.partner2} & {weddingConfig.couple.partner1}
+            {family.id === 'groom'
+              ? `${weddingConfig.couple.partner1} & ${weddingConfig.couple.partner2}`
+              : `${weddingConfig.couple.partner2} & ${weddingConfig.couple.partner1}`}
           </span>
         </a>
 

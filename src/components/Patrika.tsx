@@ -6,7 +6,7 @@ import './Faq.css'
 export default function Patrika() {
   const ref = useReveal<HTMLElement>()
   const site = useSite()
-  if (site.family !== 'bride' || !site.people.length) return null
+  if (!site.people.length) return null
 
   const printed = site.printedCouple
 
@@ -22,12 +22,14 @@ export default function Patrika() {
         {printed && (
           <>
             <p className="section-subtitle reveal">
-              {printed.bride.printedEn} · {printed.bride.parentsEn} ·{' '}
-              {printed.bride.city}
+              {site.family === 'groom'
+                ? `${printed.groom.printedEn} · S/o ${printed.groom.parentsEn} · ${printed.groom.city}`
+                : `${printed.bride.printedEn} · D/o ${printed.bride.parentsEn} · ${printed.bride.city}`}
             </p>
             <p className="section-subtitle reveal">
-              {printed.groom.printedEn} · {printed.groom.parentsEn} ·{' '}
-              {printed.groom.city}
+              {site.family === 'groom'
+                ? `Weds ${printed.bride.printedEn} · D/o ${printed.bride.parentsEn} · ${printed.bride.city}`
+                : `Weds ${printed.groom.printedEn} · S/o ${printed.groom.parentsEn} · ${printed.groom.city}`}
             </p>
           </>
         )}
@@ -43,6 +45,19 @@ export default function Patrika() {
             <div key={group.title} className="faq__item reveal">
               <p className="faq__question">
                 <span>{group.title}</span>
+                {group.note && (
+                  <span
+                    style={{
+                      fontSize: '0.82rem',
+                      fontFamily: 'var(--font-body)',
+                      color: 'var(--color-gold)',
+                      opacity: 0.9,
+                      fontWeight: 500,
+                    }}
+                  >
+                    {group.note}
+                  </span>
+                )}
               </p>
               <p className="faq__answer" lang="hi">
                 {group.names.join(' · ')}

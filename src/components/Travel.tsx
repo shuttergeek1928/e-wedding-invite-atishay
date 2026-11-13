@@ -22,13 +22,11 @@ export default function Travel() {
         const venue = venues[day.venueKey]
         if (!venue || list.some((item) => item.key === day.venueKey)) return list
         const label =
-          day.day === 24 && site.family === 'bride'
+          day.day <= 24
             ? '24 Jan · Sehore'
-            : day.day <= 24
-              ? '23–24 Jan · Sehore'
-              : daySet === '26'
-                ? '26 Jan · Bhopal'
-                : '25–26 Jan · Bhopal'
+            : daySet === '26'
+              ? '26 Jan · Bhopal'
+              : '25–26 Jan · Bhopal'
         list.push({ key: day.venueKey, label, venue })
         return list
       },
