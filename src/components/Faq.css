@@ -9,8 +9,7 @@
 
 .faq__tip {
   border: 1px solid var(--color-line);
-  background: var(--surface-card);
-  box-shadow: var(--shadow-card);
+  background: rgba(42, 10, 18, 0.92);
   padding: 1.2rem 1.35rem;
   margin-bottom: 1.5rem;
   color: var(--color-muted);
@@ -36,8 +35,7 @@
 
 .faq__item {
   border: 1px solid var(--color-line);
-  background: var(--surface-card);
-  box-shadow: var(--shadow-card);
+  background: rgba(42, 10, 18, 0.9);
 }
 
 .faq__question {

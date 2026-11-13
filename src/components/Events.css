@@ -1,5 +1,5 @@
 .events {
-  background: var(--surface-band);
+  background: rgba(42, 10, 18, 0.35);
 }
 
 .events__personal-note {
@@ -20,8 +20,7 @@
 
 .day-block {
   border: 1px solid var(--color-line);
-  background: linear-gradient(180deg, rgba(255, 253, 249, 0.98), rgba(249, 240, 226, 0.94));
-  box-shadow: var(--shadow-card);
+  background: linear-gradient(180deg, rgba(74, 22, 34, 0.55), rgba(58, 15, 25, 0.35));
   padding: clamp(1.4rem, 3.2vw, 2.2rem);
 }
 

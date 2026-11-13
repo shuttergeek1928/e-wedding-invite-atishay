@@ -2,8 +2,8 @@
   min-height: 100dvh;
   padding: clamp(1.25rem, 4vw, 2.5rem) var(--space-gutter) 3rem;
   background:
-    radial-gradient(ellipse 80% 50% at 50% -10%, rgba(207, 162, 82, 0.16), transparent 55%),
-    linear-gradient(180deg, rgba(250, 243, 232, 0.96), rgba(242, 229, 211, 0.98));
+    radial-gradient(ellipse 80% 50% at 50% -10%, rgba(201, 163, 106, 0.12), transparent 55%),
+    linear-gradient(180deg, rgba(42, 10, 18, 0.92), rgba(58, 15, 25, 0.96));
 }
 
 .admin--gate {
@@ -17,8 +17,7 @@
   display: grid;
   gap: 0.85rem;
   border: 1px solid var(--color-line);
-  background: var(--surface-card-strong);
-  box-shadow: var(--shadow-card);
+  background: rgba(42, 10, 18, 0.92);
   padding: 1.75rem 1.5rem;
   text-align: center;
 }
@@ -49,7 +48,7 @@
   width: 100%;
   min-height: 3rem;
   border: 1px solid var(--color-line);
-  background: var(--surface-input);
+  background: rgba(26, 8, 14, 0.7);
   color: var(--color-ink);
   padding: 0.75rem 0.9rem;
   font-family: var(--font-body);
@@ -57,7 +56,7 @@
 }
 
 .admin__error {
-  color: #b91c1c;
+  color: #f0b4b4;
   font-size: 0.95rem;
 }
 
@@ -120,22 +119,21 @@
 .admin__mode-btn {
   min-height: 3rem;
   border: 1px solid var(--color-line);
-  background: var(--surface-input);
+  background: rgba(26, 8, 14, 0.55);
   color: var(--color-muted);
   font-size: 1.05rem;
 }
 
 .admin__mode-btn.is-on {
   border-color: var(--color-gold);
-  background: var(--surface-selected);
+  background: rgba(74, 22, 34, 0.7);
   color: var(--color-gold-soft);
 }
 
 .admin__panel,
 .admin__history {
   border: 1px solid var(--color-line);
-  background: var(--surface-card-strong);
-  box-shadow: var(--shadow-card);
+  background: rgba(42, 10, 18, 0.9);
   padding: clamp(1.2rem, 3vw, 1.55rem);
   display: grid;
   gap: 0.95rem;
@@ -192,7 +190,7 @@
   width: 100%;
   min-height: 3.1rem;
   border: 1px solid var(--color-line);
-  background: var(--surface-input);
+  background: rgba(26, 8, 14, 0.7);
   color: var(--color-ink);
   padding: 0.75rem 0.9rem;
   font-family: var(--font-body);
@@ -223,7 +221,7 @@
   text-align: left;
   padding: 1rem 1.05rem;
   border: 1px solid var(--color-line);
-  background: var(--surface-input);
+  background: rgba(26, 8, 14, 0.55);
   color: var(--color-ink);
   min-height: 4.25rem;
 }
@@ -241,8 +239,8 @@
 
 .admin__day-card.is-on {
   border-color: var(--color-gold);
-  background: var(--surface-selected);
-  box-shadow: inset 0 0 0 1px rgba(184, 134, 53, 0.35);
+  background: rgba(74, 22, 34, 0.65);
+  box-shadow: inset 0 0 0 1px rgba(201, 163, 106, 0.35);
 }
 
 .admin__preview {
@@ -316,7 +314,7 @@
   width: 100%;
   min-height: 2.75rem;
   border: 1px solid var(--color-line);
-  background: var(--surface-input);
+  background: rgba(26, 8, 14, 0.7);
   color: var(--color-ink);
   padding: 0.6rem 0.75rem;
   font-family: var(--font-body);
@@ -345,7 +343,7 @@
   color: var(--color-gold-soft);
   border: 1px solid var(--color-line);
   padding: 0.4rem 0.65rem;
-  background: var(--surface-input);
+  background: rgba(26, 8, 14, 0.45);
 }
 
 .admin__history ul {
@@ -392,7 +390,7 @@
 .admin__wa-form textarea {
   width: 100%;
   border: 1px solid var(--color-line);
-  background: var(--surface-input);
+  background: rgba(26, 8, 14, 0.7);
   color: var(--color-ink);
   padding: 0.75rem 0.9rem;
   font-family: var(--font-body);

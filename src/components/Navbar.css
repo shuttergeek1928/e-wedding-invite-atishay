@@ -9,7 +9,7 @@
 }
 
 .navbar--solid {
-  background: var(--surface-nav);
+  background: rgba(42, 10, 18, 0.92);
   backdrop-filter: blur(14px);
   box-shadow: 0 1px 0 var(--color-line);
   padding: 0.55rem 0;
