@@ -340,7 +340,6 @@ export const weddingConfig = {
       names: [
         "Haily & Risha Anand",
         "Somya & Yashika Tiwari",
-        "Mohit & Rohit Vishwakarma",
       ],
     },
     {
@@ -351,6 +350,10 @@ export const weddingConfig = {
         "Kavya & Kanvi (Younger Sisters)",
         "Shreya Tiwari (Cousin Sister)",
         "Nusha (Niece)",
+        "Ridhika",
+        "Mohit & Rohit Vishwakarma",
+        "Sarva",
+        "Atharv",
       ],
     },
   ],
