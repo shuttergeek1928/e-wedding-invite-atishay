@@ -22,7 +22,7 @@ export type HostFamilyConfig = {
 export const hostFamilies: Record<HostFamily, HostFamilyConfig> = {
   groom: {
     id: 'groom',
-    label: 'atishay.family',
+    label: 'Atishay Family',
     hosts: ['wedding.atishay.in'],
     siteUrl: 'https://wedding.atishay.in',
     inviteFrom: 'Arvind Vishwakarma & Family',
