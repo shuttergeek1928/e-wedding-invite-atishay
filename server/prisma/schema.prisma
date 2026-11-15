@@ -1,0 +1,81 @@
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "postgresql"
+  url      = env("DATABASE_URL")
+}
+
+enum Role {
+  GROOM
+  BRIDE
+  FAMILY
+}
+
+enum Side {
+  GROOM
+  BRIDE
+}
+
+enum RsvpStatus {
+  PENDING
+  ATTENDING
+  DECLINED
+  MAYBE
+}
+
+enum MessageStatus {
+  QUEUED
+  SENT
+  DELIVERED
+  READ
+  FAILED
+}
+
+model Admin {
+  id           String @id @default(cuid())
+  name         String
+  email        String @unique
+  passwordHash String
+  role         Role
+  // FAMILY admins only see guests of this side
+  side         Side?
+}
+
+model Guest {
+  id         String     @id @default(cuid())
+  name       String
+  phone      String     @unique // E.164 without '+', e.g. 919876543210
+  side       Side
+  group      String?
+  token      String     @unique // unguessable link token, no login for guests
+  rsvp       RsvpStatus @default(PENDING)
+  headcount  Int        @default(1)
+  travelMode String? // e.g. car, train, flight
+  notes      String?
+  respondedAt DateTime?
+  createdAt  DateTime   @default(now())
+  messages   Message[]
+}
+
+model Campaign {
+  id        String    @id @default(cuid())
+  kind      String // INVITE | REMINDER
+  template  String
+  eventKey  String?
+  createdAt DateTime  @default(now())
+  messages  Message[]
+}
+
+model Message {
+  id         String        @id @default(cuid())
+  guestId    String
+  campaignId String
+  waId       String?       @unique // WhatsApp message id
+  status     MessageStatus @default(QUEUED)
+  error      String?
+  createdAt  DateTime      @default(now())
+  guest      Guest         @relation(fields: [guestId], references: [id])
+  campaign   Campaign      @relation(fields: [campaignId], references: [id])
+}
