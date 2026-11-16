@@ -5,7 +5,6 @@ import Countdown from './components/Countdown'
 import Story from './components/Story'
 import Events from './components/Events'
 import Patrika from './components/Patrika'
-import Timeline from './components/Timeline'
 import Travel from './components/Travel'
 import Faq from './components/Faq'
 import Blessings from './components/Blessings'
@@ -23,7 +22,6 @@ export default function App() {
         <Story />
         <Events />
         <Patrika />
-        <Timeline />
         <Travel />
         <Faq />
         <Blessings />

@@ -336,20 +336,15 @@ export const weddingConfig = {
       ],
     },
     {
-      title: "Brothers & Sisters-in-law / स्नेही स्वजन",
+      title: "Cousins / स्नेही स्वजन",
+      note: "Eagerly awaiting your presence",
       names: [
         "Haily & Risha Anand",
         "Somya & Yashika Tiwari",
-      ],
-    },
-    {
-      title: "Younger Siblings & Niece / बाल मनुहार",
-      note: "Eagerly awaiting your presence",
-      names: [
-        "Jainick (Younger Brother)",
-        "Kavya & Kanvi (Younger Sisters)",
-        "Shreya Tiwari (Cousin Sister)",
-        "Nusha (Niece)",
+        "Jainick",
+        "Kavya & Kanvi",
+        "Shreya Tiwari",
+        "Nusha",
         "Ridhika",
         "Mohit & Rohit Vishwakarma",
         "Sarva",
