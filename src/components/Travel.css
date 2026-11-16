@@ -113,6 +113,26 @@
   font-style: italic;
 }
 
+.travel-mode__stations {
+  display: flex;
+  flex-direction: column;
+  gap: 0.65rem;
+}
+
+.travel-mode__station {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: baseline;
+  gap: 0.4rem 0.85rem;
+}
+
+.travel-mode__station-label {
+  font-size: 0.72rem;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--color-gold-soft);
+}
+
 .travel-mode__links {
   display: flex;
   flex-wrap: wrap;

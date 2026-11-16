@@ -34,8 +34,11 @@ export type TravelMode = {
   name: string
   detail: string
   link: string
+  appleMapsLink?: string
+  primaryLabel?: string
   secondaryLabel?: string
   secondaryLink?: string
+  secondaryAppleMapsLink?: string
 }
 
 export type PeopleGroup = {

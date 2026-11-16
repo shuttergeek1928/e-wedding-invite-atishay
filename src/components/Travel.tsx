@@ -89,26 +89,81 @@ export default function Travel() {
               <p className="travel-mode__label">{item.mode}</p>
               <h3 className="travel-mode__name">{item.name}</h3>
               <p className="travel-mode__detail">{item.detail}</p>
-              <div className="travel-mode__links">
-                <a
-                  href={item.link}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="travel-mode__link"
-                >
-                  Open location →
-                </a>
-                {item.secondaryLink && (
+              {item.secondaryLink ? (
+                <div className="travel-mode__stations">
+                  <div className="travel-mode__station">
+                    <span className="travel-mode__station-label">
+                      {item.primaryLabel || 'Bhopal (BPL)'}
+                    </span>
+                    <div className="travel-mode__links">
+                      <a
+                        href={item.link}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="travel-mode__link"
+                      >
+                        Google Maps
+                      </a>
+                      {item.appleMapsLink && (
+                        <a
+                          href={item.appleMapsLink}
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          className="travel-mode__link"
+                        >
+                          Apple Maps
+                        </a>
+                      )}
+                    </div>
+                  </div>
+                  <div className="travel-mode__station">
+                    <span className="travel-mode__station-label">
+                      {item.secondaryLabel || 'Sehore (SEH)'}
+                    </span>
+                    <div className="travel-mode__links">
+                      <a
+                        href={item.secondaryLink}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="travel-mode__link"
+                      >
+                        Google Maps
+                      </a>
+                      {item.secondaryAppleMapsLink && (
+                        <a
+                          href={item.secondaryAppleMapsLink}
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          className="travel-mode__link"
+                        >
+                          Apple Maps
+                        </a>
+                      )}
+                    </div>
+                  </div>
+                </div>
+              ) : (
+                <div className="travel-mode__links">
                   <a
-                    href={item.secondaryLink}
+                    href={item.link}
                     target="_blank"
                     rel="noopener noreferrer"
                     className="travel-mode__link"
                   >
-                    {item.secondaryLabel || 'Open station →'}
+                    {item.appleMapsLink ? 'Google Maps' : 'Open location →'}
                   </a>
-                )}
-              </div>
+                  {item.appleMapsLink && (
+                    <a
+                      href={item.appleMapsLink}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="travel-mode__link"
+                    >
+                      Apple Maps
+                    </a>
+                  )}
+                </div>
+              )}
             </article>
           ))}
         </div>

@@ -63,7 +63,7 @@ export const bridePatrika = {
       address: 'TBD',
       shortAddress: 'TBD',
       mapUrl: sehoreMaps,
-      appleMapsUrl: 'https://maps.apple.com/?q=Sehore%20Madhya%20Pradesh',
+      appleMapsUrl: 'https://maps.apple/p/im.HrQ.sJ.Dx5L',
       googleMapsUrl: sehoreMaps,
     },
     hotel: {
@@ -72,8 +72,7 @@ export const bridePatrika = {
         'Shambhala Resort, behind Campion School, Bhauri, Bhopal, Madhya Pradesh 462030',
       shortAddress: 'Bhauri, Bhopal',
       mapUrl: hotelMaps,
-      appleMapsUrl:
-        'https://maps.apple.com/?q=Shambhala%20Resort%20Bhauri%20Bhopal',
+      appleMapsUrl: 'https://maps.apple/p/v6o9g3ghcie87a',
       googleMapsUrl: hotelMaps,
     },
   },
@@ -156,15 +155,19 @@ export const bridePatrika = {
         detail:
           'Nearest airport for both cities — convenient cab access to Shambhala Resort, Bhauri (Bhopal) and Sehore.',
         link: 'https://maps.app.goo.gl/eWYHCdR63BPjKtkt9',
+        appleMapsLink: 'https://maps.apple/p/i5ZEnJPMxJmSrv',
       },
       {
         mode: 'Railway',
         name: 'Bhopal Junction (BPL) & Sehore (SEH)',
         detail:
           'For Sehore celebrations, arrive at Sehore (SEH). For 25–26 Jan events at Shambhala Resort, Bhopal Junction (BPL) is convenient.',
+        primaryLabel: 'Bhopal (BPL)',
         link: 'https://maps.app.goo.gl/DJTgRZw42XstVsGx8',
-        secondaryLabel: 'Sehore (SEH) →',
+        appleMapsLink: 'https://maps.apple/p/vKe5of~qK34WJr',
+        secondaryLabel: 'Sehore (SEH)',
         secondaryLink: 'https://maps.app.goo.gl/ZiiFvm6QW3wdHd6m9',
+        secondaryAppleMapsLink: 'https://maps.apple/p/~5DRV.qZga60Bw',
       },
       {
         mode: 'Bus',
@@ -172,6 +175,7 @@ export const bridePatrika = {
         detail:
           'Regular interstate and local buses connect Bhopal and Sehore (approx. 1–1.5 hours). Convenient if you’re travelling within Madhya Pradesh.',
         link: 'https://maps.app.goo.gl/DDGL2j8aJz19JQAh8',
+        appleMapsLink: 'https://maps.apple/p/rSAh2S1TL9u7Bg',
       },
     ],
   },
