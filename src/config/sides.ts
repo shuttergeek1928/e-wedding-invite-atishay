@@ -25,14 +25,14 @@ export const hostFamilies: Record<HostFamily, HostFamilyConfig> = {
     label: 'Atishay Family',
     hosts: ['wedding.atishay.in'],
     siteUrl: 'https://wedding.atishay.in',
-    inviteFrom: 'Arvind Vishwakarma & Family',
+    inviteFrom: 'Mr. Arvind Vishwakarma & Family',
   },
   bride: {
     id: 'bride',
     label: 'Anushka Family',
     hosts: ['wedding.anushka.in'],
     siteUrl: 'https://wedding.anushka.in',
-    inviteFrom: 'Lt. Arvind Pratap Singh & Archana Singh',
+    inviteFrom: 'Lt. Mr. Arvind Pratap Singh & Mrs. Archana Singh',
   },
 }
 

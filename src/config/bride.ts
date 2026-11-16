@@ -22,23 +22,23 @@ export const bridePatrika = {
     bride: {
       printed: 'Anushka Singh',
       printedEn: 'Anushka Singh',
-      parents: 'Lt. Arvind Pratap Singh & Archana Singh',
-      parentsEn: 'Lt. Arvind Pratap Singh & Archana Singh',
+      parents: 'Lt. Mr. Arvind Pratap Singh & Mrs. Archana Singh',
+      parentsEn: 'Lt. Mr. Arvind Pratap Singh & Mrs. Archana Singh',
       grandparents: 'TBD',
       city: 'Sehore',
     },
     groom: {
       printed: 'Atishay Vishwakarma',
       printedEn: 'Atishay Vishwakarma',
-      parents: 'Rekha & Arvind Vishwakarma',
-      parentsEn: 'Rekha & Arvind Vishwakarma',
+      parents: 'Mrs. Rekha & Mr. Arvind Vishwakarma',
+      parentsEn: 'Mrs. Rekha & Mr. Arvind Vishwakarma',
       grandparents: 'Leela Devi Vishwakarma',
       city: 'Sehore',
     },
   },
 
-  inviteFrom: 'Lt. Arvind Pratap Singh & Archana Singh',
-  inviteFromEn: 'Lt. Arvind Pratap Singh & Archana Singh',
+  inviteFrom: 'Lt. Mr. Arvind Pratap Singh & Mrs. Archana Singh',
+  inviteFromEn: 'Lt. Mr. Arvind Pratap Singh & Mrs. Archana Singh',
   hosts: ['TBD Siblings'],
 
   hero: {
@@ -235,8 +235,8 @@ export const bridePatrika = {
     {
       title: "Atishay's family",
       names: [
-        'Arvind Vishwakarma',
-        'Rekha Vishwakarma',
+        'Mr. Arvind Vishwakarma',
+        'Mrs. Rekha Vishwakarma',
         'Sandeep Vishwakarma',
         'Rashmi Vishwakarma',
       ],

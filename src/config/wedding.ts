@@ -43,7 +43,7 @@ export const weddingConfig = {
    * Default WhatsApp sign-off (Atishay / Vishwakarma).
    * Overridden per domain in src/config/sides.ts
    */
-  inviteFrom: "Arvind Vishwakarma & Family",
+  inviteFrom: "Mr. Arvind Vishwakarma & Family",
 
   ours: {
     lines: [],
@@ -186,7 +186,7 @@ export const weddingConfig = {
         {
           nameHi: "स्नेहभोज एवं रिसेप्शन",
           name: "Reception & Dinner",
-          time: "8:00 PM onwards",
+          time: "7:00 PM onwards",
           note: "Dinner, blessings & evening celebration",
           host: "groom" as const,
         },
@@ -220,7 +220,7 @@ export const weddingConfig = {
       start: "20270126T110000",
       end: "20270126T235900",
       location: "Shambhala Resort, Bhauri, Bhopal",
-      description: "Baraat (11:00 AM) · Toran (1:00 PM) · Varmala (2:00 PM) · Phere (2:30 PM) · Reception (8:00 PM onwards)",
+      description: "Baraat (11:00 AM) · Toran (1:00 PM) · Varmala (2:00 PM) · Phere (2:30 PM) · Reception (7:00 PM onwards)",
     },
   ],
 
@@ -246,7 +246,7 @@ export const weddingConfig = {
       description: "Sacred pheras and vivah rituals following Varmala",
     },
     {
-      time: "8:00 PM",
+      time: "7:00 PM",
       title: "Reception & Dinner",
       description: "Grand reception, dinner, and blessings with family & friends",
     },
@@ -316,7 +316,7 @@ export const weddingConfig = {
     {
       title: "Parents / निवेदक",
       note: "With the invitation",
-      names: ["Rekha & Arvind Vishwakarma"],
+      names: ["Mrs. Rekha & Mr. Arvind Vishwakarma"],
     },
     {
       title: "Elders & Uncles / स्वागताकांक्षी",
