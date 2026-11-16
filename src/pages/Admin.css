@@ -412,3 +412,88 @@
   min-height: auto !important;
   margin-top: 0.2rem;
 }
+
+.admin__gate--wide {
+  width: min(29rem, 100%);
+}
+
+.admin__top--wide,
+.admin__simple--wide {
+  max-width: 56rem;
+}
+
+.admin__role-pills {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 0.45rem;
+}
+
+.admin__mini.is-on {
+  border-color: var(--color-gold);
+  background: rgba(74, 22, 34, 0.75);
+  color: var(--color-gold-soft);
+}
+
+.admin__badge {
+  display: inline-block;
+  font-size: 0.75rem;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  padding: 0.15rem 0.45rem;
+  margin-left: 0.35rem;
+  border: 1px solid var(--color-line);
+  background: rgba(26, 8, 14, 0.65);
+  color: var(--color-gold-soft);
+}
+
+.admin__grid-2 {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(14rem, 1fr));
+  gap: 0.75rem;
+}
+
+.admin__grid-3 {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(11rem, 1fr));
+  gap: 0.75rem;
+}
+
+.admin__select,
+.admin__textarea {
+  width: 100%;
+  min-height: 3.1rem;
+  border: 1px solid var(--color-line);
+  background: rgba(26, 8, 14, 0.7);
+  color: var(--color-ink);
+  padding: 0.65rem 0.85rem;
+  font-family: var(--font-body);
+  font-size: 1rem;
+}
+
+.admin__select--sm {
+  width: auto;
+  min-height: 2.2rem;
+  padding: 0.3rem 0.6rem;
+  font-size: 0.85rem;
+}
+
+.admin__guest-row {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: 0.75rem;
+}
+
+.admin__banner--ok {
+  border: 1px solid var(--color-gold);
+  background: rgba(74, 22, 34, 0.75);
+  padding: 0.75rem 1rem;
+}
+
+.admin__banner--err {
+  border: 1px solid rgba(240, 180, 180, 0.5);
+  background: rgba(80, 16, 24, 0.8);
+  padding: 0.75rem 1rem;
+  margin: 0;
+}

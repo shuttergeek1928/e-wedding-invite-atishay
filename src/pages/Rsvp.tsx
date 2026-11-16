@@ -1,25 +1,51 @@
-import { FormEvent, useMemo, useState } from 'react'
+import { FormEvent, useEffect, useMemo, useState } from 'react'
 import { weddingConfig } from '../config/wedding'
 import { features, rsvpUrl } from '../config/features'
-import { useGuestInvite } from '../hooks/useGuestInvite'
+import { useBackendGuestInvite, useGuestInvite } from '../hooks/useGuestInvite'
 import { formatGuestLine } from '../utils/invite'
 import './Rsvp.css'
 
 type Attending = 'yes' | 'no' | 'maybe'
 type Days = 'all' | '25-26' | '26'
 
+const RSVP_TO_BACKEND: Record<Attending, 'ATTENDING' | 'DECLINED' | 'MAYBE'> = {
+  yes: 'ATTENDING',
+  no: 'DECLINED',
+  maybe: 'MAYBE',
+}
+
+const BACKEND_TO_RSVP: Record<string, Attending> = {
+  ATTENDING: 'yes',
+  DECLINED: 'no',
+  MAYBE: 'maybe',
+}
+
 export default function Rsvp() {
   const invite = useGuestInvite()
+  const { data: backendGuest, loading: backendLoading } = useBackendGuestInvite()
   const [name, setName] = useState(invite?.n || '')
   const [phone, setPhone] = useState('')
   const [attending, setAttending] = useState<Attending>('yes')
-  const [days, setDays] = useState<Days>(
-    (invite?.d as Days) || 'all'
-  )
+  const [days, setDays] = useState<Days>((invite?.d as Days) || 'all')
   const [guestCount, setGuestCount] = useState(1)
+  const [travelMode, setTravelMode] = useState('Car')
   const [message, setMessage] = useState('')
   const [status, setStatus] = useState<'idle' | 'saving' | 'ok' | 'error'>('idle')
   const [error, setError] = useState('')
+
+  useEffect(() => {
+    if (backendGuest) {
+      setName(backendGuest.name)
+      if (BACKEND_TO_RSVP[backendGuest.rsvp]) {
+        setAttending(BACKEND_TO_RSVP[backendGuest.rsvp])
+      }
+      if (backendGuest.headcount) setGuestCount(backendGuest.headcount)
+      if (backendGuest.travelMode) setTravelMode(backendGuest.travelMode)
+      if (backendGuest.notes) setMessage(backendGuest.notes)
+    } else if (invite?.n && !name) {
+      setName(invite.n)
+    }
+  }, [backendGuest, invite])
 
   const greeting = useMemo(() => {
     if (!invite) return null
@@ -31,6 +57,26 @@ export default function Rsvp() {
     setStatus('saving')
     setError('')
     try {
+      if (backendGuest?.token) {
+        const res = await fetch(
+          `/api/public/invite/${encodeURIComponent(backendGuest.token)}/rsvp`,
+          {
+            method: 'POST',
+            headers: { 'Content-Type': 'application/json' },
+            body: JSON.stringify({
+              rsvp: RSVP_TO_BACKEND[attending],
+              headcount: attending === 'no' ? 1 : guestCount,
+              travelMode: attending === 'no' ? undefined : travelMode,
+              notes: message.trim() || undefined,
+            }),
+          }
+        )
+        const data = await res.json().catch(() => ({}))
+        if (!res.ok) throw new Error(data.error || 'Could not save RSVP')
+        setStatus('ok')
+        return
+      }
+
       const res = await fetch(rsvpUrl('/api/rsvp'), {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
@@ -53,14 +99,16 @@ export default function Rsvp() {
     }
   }
 
-  if (!features.rsvp) {
+  if (!features.rsvp && !backendGuest && !backendLoading) {
     return (
       <div className="rsvp rsvp--off">
-        <p>RSVP is not enabled in this build.</p>
+        <p>Please open your personal invitation link from WhatsApp to submit your RSVP.</p>
         <a href="/">← Back to invite</a>
       </div>
     )
   }
+
+  const backHref = backendGuest ? `/i/${encodeURIComponent(backendGuest.token)}` : '/'
 
   return (
     <div className="rsvp">
@@ -77,7 +125,7 @@ export default function Rsvp() {
             आदरणीय {greeting}
           </p>
         )}
-        <a className="rsvp__back" href="/">
+        <a className="rsvp__back" href={backHref}>
           ← Wedding invite
         </a>
       </header>
@@ -89,7 +137,7 @@ export default function Rsvp() {
             Your RSVP is recorded. We’ll see you
             {attending === 'no' ? ' in our thoughts' : ' at the celebrations'}.
           </p>
-          <a className="btn btn-primary" href="/">
+          <a className="btn btn-primary" href={backHref}>
             Back to invite
           </a>
         </section>
@@ -104,19 +152,22 @@ export default function Rsvp() {
               minLength={2}
               placeholder="Full name"
               autoComplete="name"
+              readOnly={Boolean(backendGuest)}
             />
           </label>
 
-          <label>
-            WhatsApp number
-            <input
-              value={phone}
-              onChange={(e) => setPhone(e.target.value)}
-              inputMode="tel"
-              placeholder="98765 43210"
-              autoComplete="tel"
-            />
-          </label>
+          {!backendGuest && (
+            <label>
+              WhatsApp number
+              <input
+                value={phone}
+                onChange={(e) => setPhone(e.target.value)}
+                inputMode="tel"
+                placeholder="98765 43210"
+                autoComplete="tel"
+              />
+            </label>
+          )}
 
           <fieldset>
             <legend>Will you attend?</legend>
@@ -172,6 +223,23 @@ export default function Rsvp() {
                   onChange={(e) => setGuestCount(Number(e.target.value) || 1)}
                 />
               </label>
+
+              <fieldset>
+                <legend>How will you travel?</legend>
+                {(['Car', 'Train', 'Flight', 'Bus', 'Local'] as const).map(
+                  (mode) => (
+                    <label key={mode} className="rsvp__radio">
+                      <input
+                        type="radio"
+                        name="travelMode"
+                        checked={travelMode === mode}
+                        onChange={() => setTravelMode(mode)}
+                      />
+                      {mode}
+                    </label>
+                  )
+                )}
+              </fieldset>
             </>
           )}
 

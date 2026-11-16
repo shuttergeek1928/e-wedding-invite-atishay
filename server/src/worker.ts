@@ -1,5 +1,5 @@
 import { Worker } from 'bullmq'
-import { prisma, redis, guestLink } from './lib.js'
+import { prisma, getRedis, guestLink } from './lib.js'
 import { sendTemplate } from './whatsapp.js'
 
 // Rate-limited sender: ~10 messages/second, retried with backoff by the queue.
@@ -28,7 +28,7 @@ export const worker = new Worker(
       throw e
     }
   },
-  { connection: redis, limiter: { max: 10, duration: 1000 } },
+  { connection: getRedis(), limiter: { max: 10, duration: 1000 } },
 )
 
 worker.on('failed', async (job, err) => {

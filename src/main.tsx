@@ -3,6 +3,7 @@ import { createRoot } from 'react-dom/client'
 import App from './App'
 import Admin from './pages/Admin'
 import AdminRsvp from './pages/AdminRsvp'
+import AdminWhatsapp from './pages/AdminWhatsapp'
 import Rsvp from './pages/Rsvp'
 import { features } from './config/features'
 import './index.css'
@@ -10,6 +11,7 @@ import './index.css'
 const path = window.location.pathname.replace(/\/+$/, '') || '/'
 
 function Root() {
+  if (path === '/admin/whatsapp') return <AdminWhatsapp />
   if (path === '/admin/rsvp') return <AdminRsvp />
   if (path === '/admin') return <Admin />
   if (path === '/rsvp') return <Rsvp />

@@ -1,6 +1,7 @@
 import type { FastifyInstance } from 'fastify'
 import { z } from 'zod'
-import { prisma, newToken, verifyPassword, sendQueue, guestLink } from '../lib.js'
+import { prisma, newToken, verifyPassword, tryEnqueue, guestLink } from '../lib.js'
+import { scheduleInProcessSend } from '../dispatcher.js'
 
 type Role = 'GROOM' | 'BRIDE' | 'FAMILY'
 type User = { id: string; role: Role; side: 'GROOM' | 'BRIDE' | null }
@@ -42,12 +43,19 @@ export async function adminRoutes(app: FastifyInstance) {
     })
     // Only groom and bride may send messages or manage guests of both sides
     const couple = async (req: any, reply: any) => {
-      if (req.user.role === 'FAMILY') reply.code(403).send({ error: 'Forbidden' })
+      if (req.user.role === 'FAMILY') return reply.code(403).send({ error: 'Forbidden: Groom or Bride role required' })
     }
 
-    a.get('/guests', async (req) =>
-      prisma.guest.findMany({ where: sideFilter(req.user), orderBy: { name: 'asc' } }),
-    )
+    a.get('/auth/me', async (req) => {
+      const admin = await prisma.admin.findUnique({ where: { id: req.user.id } })
+      if (!admin) return { user: req.user }
+      return { user: { id: admin.id, name: admin.name, email: admin.email, role: admin.role, side: admin.side } }
+    })
+
+    a.get('/guests', async (req) => {
+      const list = await prisma.guest.findMany({ where: sideFilter(req.user), orderBy: { name: 'asc' } })
+      return list.map((g) => ({ ...g, link: guestLink(g.token) }))
+    })
 
     a.post('/guests', async (req, reply) => {
       const body = guestInput.parse(req.body)
@@ -69,6 +77,30 @@ export async function adminRoutes(app: FastifyInstance) {
         if (res) created++
       }
       return { processed: created }
+    })
+
+    a.patch('/guests/:id', async (req, reply) => {
+      const { id } = req.params as { id: string }
+      const existing = await prisma.guest.findUnique({ where: { id } })
+      if (!existing) return reply.code(404).send({ error: 'Not found' })
+      if (req.user.role === 'FAMILY' && existing.side !== req.user.side)
+        return reply.code(403).send({ error: 'Forbidden' })
+      const body = z
+        .object({
+          name: z.string().min(1).optional(),
+          phone: z.string().regex(/^\d{8,15}$/).optional(),
+          side: z.enum(['GROOM', 'BRIDE']).optional(),
+          group: z.string().nullable().optional(),
+          rsvp: z.enum(['PENDING', 'ATTENDING', 'DECLINED', 'MAYBE']).optional(),
+          headcount: z.number().int().min(1).max(20).optional(),
+          travelMode: z.string().nullable().optional(),
+          notes: z.string().nullable().optional(),
+        })
+        .parse(req.body)
+      if (req.user.role === 'FAMILY' && body.side && body.side !== req.user.side)
+        return reply.code(403).send({ error: 'Forbidden' })
+      const updated = await prisma.guest.update({ where: { id }, data: body })
+      return { ...updated, link: guestLink(updated.token) }
     })
 
     a.delete('/guests/:id', { preHandler: couple }, async (req) => {
@@ -103,9 +135,42 @@ export async function adminRoutes(app: FastifyInstance) {
       const delay = body.scheduledAt ? Math.max(0, new Date(body.scheduledAt).getTime() - Date.now()) : 0
       for (const g of guests) {
         const m = await prisma.message.create({ data: { guestId: g.id, campaignId: campaign.id } })
-        await sendQueue.add('send', { messageId: m.id }, { delay, attempts: 4, backoff: { type: 'exponential', delay: 5000 } })
+        const queuedInRedis = await tryEnqueue(m.id, delay)
+        if (!queuedInRedis) {
+          scheduleInProcessSend(m.id, delay)
+        }
       }
       return { campaignId: campaign.id, queued: guests.length }
+    })
+
+    a.get('/campaigns', async () => {
+      const campaigns = await prisma.campaign.findMany({
+        orderBy: { createdAt: 'desc' },
+        take: 25,
+        include: {
+          messages: {
+            select: { status: true, error: true },
+          },
+        },
+      })
+      return campaigns.map((c) => {
+        const stats: Record<string, number> = { QUEUED: 0, SENT: 0, DELIVERED: 0, READ: 0, FAILED: 0 }
+        let lastError: string | null = null
+        for (const m of c.messages) {
+          stats[m.status] = (stats[m.status] ?? 0) + 1
+          if (m.error && !lastError) lastError = m.error
+        }
+        return {
+          id: c.id,
+          kind: c.kind,
+          template: c.template,
+          eventKey: c.eventKey,
+          createdAt: c.createdAt,
+          total: c.messages.length,
+          stats,
+          lastError,
+        }
+      })
     })
 
     a.get('/campaigns/:id', async (req) => {

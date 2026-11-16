@@ -5,13 +5,22 @@ export default defineConfig({
   plugins: [react()],
   server: {
     proxy: {
-      // Local RSVP API (only used when VITE_RSVP_ENABLED=true)
+      // Local RSVP API (legacy)
       '/api/rsvp': {
         target: 'http://localhost:8787',
         changeOrigin: true,
       },
+      // WhatsApp Business & RBAC Backend (server/)
+      '/api': {
+        target: 'http://localhost:4000',
+        changeOrigin: true,
+      },
+      '/webhook': {
+        target: 'http://localhost:4000',
+        changeOrigin: true,
+      },
       '/health': {
-        target: 'http://localhost:8787',
+        target: 'http://localhost:4000',
         changeOrigin: true,
       },
     },

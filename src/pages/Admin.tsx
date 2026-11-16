@@ -510,6 +510,9 @@ export default function Admin() {
           <button type="submit" className="btn btn-primary admin__big-btn">
             Open
           </button>
+          <a className="btn btn-ghost admin__big-btn" href="/admin/whatsapp">
+            WhatsApp Business & RBAC Login →
+          </a>
           <a className="admin__back" href="/">
             ← Wedding site
           </a>
@@ -531,6 +534,9 @@ export default function Admin() {
           </p>
         </div>
         <div className="admin__top-actions">
+          <a className="admin__mini is-on" href="/admin/whatsapp">
+            WhatsApp Business & RBAC →
+          </a>
           {features.rsvp && (
             <a className="admin__back" href="/admin/rsvp">
               RSVP inbox

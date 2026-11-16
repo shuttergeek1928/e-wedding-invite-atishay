@@ -7,11 +7,44 @@ import { randomBytes, scryptSync, timingSafeEqual } from 'node:crypto'
 export const env = (k: string, d = '') => process.env[k] ?? d
 
 export const prisma = new PrismaClient()
-export const redis = new Redis(env('REDIS_URL', 'redis://localhost:6379'), {
-  maxRetriesPerRequest: null,
-  lazyConnect: true,
-})
-export const sendQueue = new Queue('wa-send', { connection: redis })
+
+let _redis: Redis | undefined
+export function getRedis() {
+  return (_redis ??= new Redis(env('REDIS_URL', 'redis://localhost:6379'), {
+    maxRetriesPerRequest: null,
+    lazyConnect: true,
+  }))
+}
+
+let _sendQueue: Queue | undefined
+export function getSendQueue() {
+  return (_sendQueue ??= new Queue('wa-send', { connection: getRedis() }))
+}
+
+/**
+ * Enqueue a message in BullMQ/Redis if Redis is reachable; otherwise return false
+ * so the in-process Postgres dispatcher handles it automatically without Redis.
+ */
+export async function tryEnqueue(messageId: string, delay = 0): Promise<boolean> {
+  if (!env('REDIS_URL')) return false
+  try {
+    const r = getRedis()
+    if (r.status === 'wait' || r.status === 'end') {
+      await Promise.race([
+        r.connect(),
+        new Promise((_, rej) => setTimeout(() => rej(new Error('Redis timeout')), 600)),
+      ])
+    }
+    await getSendQueue().add(
+      'send',
+      { messageId },
+      { delay, attempts: 4, backoff: { type: 'exponential', delay: 5000 } },
+    )
+    return true
+  } catch {
+    return false
+  }
+}
 
 export const newToken = () => randomBytes(18).toString('base64url')
 

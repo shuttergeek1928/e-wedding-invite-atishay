@@ -9,6 +9,10 @@ const admins = [
 ] as const
 
 for (const a of admins)
-  await prisma.admin.upsert({ where: { email: a.email }, update: {}, create: { ...a, passwordHash: pw } })
+  await prisma.admin.upsert({
+    where: { email: a.email },
+    update: { passwordHash: pw },
+    create: { ...a, passwordHash: pw },
+  })
 console.log('Seeded admins (change emails/passwords before going live)')
 await prisma.$disconnect()
